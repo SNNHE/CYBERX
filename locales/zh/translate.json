@@ -1,0 +1,71 @@
+{
+	"nav":{
+			"Services":"Services",
+			"Team":"Team",
+			"Onboard":"Onboard",
+			"Contact":"Contact",
+			"OTC":"OTC"
+	},
+	"logo":"company LOGO",
+	"main":{
+			"Essentail":"Essentail",
+			"Trading":"Trading",
+			"Platfrom":"Platfrom",
+			"textPrint":"Founded in 2016, CyberX is the leading prime broker in crypto space specializing in trading execution, market making, OTC and lending"
+	},
+	"banner":{
+			"Trading":"Trading",
+			"Execution":"Execution",
+			"oneA":"· Integrating liquidity from all major   exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms",
+			"oneB":"· Integrating liquidity from all major   exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms",
+			"Market":"Market",
+			"Making":"Making",
+			"twoA":"· Integrating liquidity from all major   exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms",
+			"twoB":"· Integrating liquidity from all major   exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms",
+			"OTC":"OTC",
+			"threeA":"· Integrating liquidity from all major   exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms",
+			"threeB":"· Integrating liquidity from all major   exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms",
+			"fourA":"· Integrating liquidity from all major   exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms",
+			"fourB":"· Integrating liquidity from all major   exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms"
+	},
+	"technology":{
+			"Driven":"Driven",
+			"DrivenText":"CyberX is a technology driven company. CyberX team is creating a powerful and flexible platform to provide full range of services and products by utilizing latest advancements in blockchain, mathematical modeling, deep learning, financial engineering, and data mining.",
+			"Artificial":"Artificial",
+			"Intelligence":"Intelligence",
+			"Ainfo":"<p>   ·· Deep Learning - Market’s  micro-structure analysis to predict price direction </p>  <p>  · Natural Language Processing - Data mining for market and social sentiment monitoring</p>   <p>· Machine Learning - Token white list screening  </p>",
+			"Binfo":"<p>   ·· Deep Learning - Market’s  micro-structure analysis to predict price direction </p>  <p>  · Natural Language Processing - Data mining for market and social sentiment monitoring</p>   <p>· Machine Learning - Token white list screening  </p>",
+			"Cinfo":"<p>   ·· Deep Learning - Market’s  micro-structure analysis to predict price direction </p>  <p>  · Natural Language Processing - Data mining for market and social sentiment monitoring</p>   <p>· Machine Learning - Token white list screening  </p>"
+	},
+	"ourteam":{
+		"learn": "Learn More",
+			"Our":"Our",
+			"Team":"Team",
+			"info":"Our team consists of veterans from Wall Street banks Goldman Sachs, UBS, Merrill Lynch, top tier funds Citadel, AQR, Blackrock, GSA and Tech leaders Google, Baidu, Thompson Reuters. The founder of CyberX also previously co-founded the first cryptocurrency wallet company in China, Bihang.com in 2013, which was acquired by OKCoin (now known as OKEx).",
+			"Aname": "Hao Wang",
+			"Amiddle": "<p>CFA</p> <p>10 Year+Crypto/Blockchain/Quant</p>",
+			"Abottom": " <p> Bihang.com</p><p>Co-founder</p> <p>Goldman Sachs, Tokyo, FICC</p><p>Quant</p><p>University of Tokyo</p><p> Mathematic</p>",
+			"Bname": "Hao Wang",
+			"Byear": "10 Year+",
+			"Bmiddle": "<p>CFA</p> <p>10 Year+Crypto/Blockchain/Quant</p>",
+			"Bbottom": " <p> Bihang.com</p><p>Co-founder</p> <p>Goldman Sachs, Tokyo, FICC</p><p>Quant</p><p>University of Tokyo</p><p> Mathematic</p>"
+	},
+	"industry": {
+		"title": "Industry Thoughts",
+		"onetxt": "“I just started using CyberX for trading. Wow. This is really the best trading experience. What in the world have I been waiting for? Exceeding expectations.”",
+		"onename": "<p >Peter</p> <p class='position'>Trader</p>",
+		"twotxt": "“I just started using CyberX for trading. Wow. This is really the best trading experience. What in the world have I been waiting for? Exceeding expectations.”",
+		"twoname": "<p>Peter</p> <p class='position'>Trader</p>",
+		"threetxt": "“I just started using CyberX for trading. Wow. This is really the best trading experience. What in the world have I been waiting for? Exceeding expectations.”",
+		"threename": "<p >Peter</p> <p class='position'>Trader</p>",
+		"date": "2020.20.20"
+	},
+	"global": {
+		"title": "Global Location"
+	},
+	"contact": {
+		"title": "Contact_",
+		"copyrights": "© CyberX 2020   |   Terms&Conditions   |   Privacy Policy   |  Support",
+		"business": " <p>Email: business@cyberx.com</p><p> Weibo: CyberX</p> <p>Twitter: CyberX_Official</p>"
+	}
+}
