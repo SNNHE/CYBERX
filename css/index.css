@@ -208,6 +208,7 @@
   flex: 1 1 55%;
   background: url(../images/banner3.png) no-repeat;
   background-size: cover;
+  background-position: center center;
 }
 .banner .slide-four .slide-text {
   flex: 1 1 50%;
@@ -217,6 +218,7 @@
   flex: 1 1 50%;
   background: url(../images/banner4.png) no-repeat;
   background-size: cover;
+  background-position: center center;
 }
 .banner .swiper-pagination {
   margin-bottom: 24px;
