@@ -814,6 +814,8 @@
 				}
       return {
         init() {
+          let langType = getCookie("language")||"en";
+          lang(langType);
           splitText();
           checkLanguage();
           scrollMonitor();
