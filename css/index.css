@@ -572,11 +572,15 @@
   letter-spacing: -1px;
 }
 .global-location .earth-location {
+  height: 541px;
   overflow: hidden;
   margin-top: 158px;
+  background: url(../images/enearth.png) no-repeat top 0 center;
+  background-size: cover;
 }
-.global-location .earth-location img {
-  width: 100%;
+.global-location .earth-location.zhbg {
+  background: url(../images/zhearth.png) no-repeat top 0 center;
+  background-size: cover;
 }
 .contact {
   height: 392px;

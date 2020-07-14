@@ -52,18 +52,19 @@
 
     function checkLanguage() {
       let language = $('.nav .language'),
-        changeImg = $('#globalLocation .bottom-earth');
+        changeImg = $('#globalLocation .earth-location');
       language.click(function () {
         let text = $.trim($(this).text());
+        let hasClass = changeImg.hasClass('zhbg');
         // console.log( $.trim($(this).text()), ' $(this).text();')
         if (text === 'English') {
           $(this).find('.text').text('简体中文');
-          changeImg.attr({ src: "./images/zhearth.png" });
+          hasClass ? null : changeImg.addClass('zhbg');
           lang("zh");
           saveCookie("language", "zh", 1);
         } else {
           $(this).find('.text').text('English');
-          changeImg.attr({ src: "./images/enearth.png" });
+          hasClass ? changeImg.removeClass('zhbg') : null;
           lang("en");
           saveCookie("language", "en", 1);
         }
@@ -353,8 +354,8 @@
         map: textureW,
         side: THREE.DoubleSide,
         transparent: true,
-        opacity: .8
-        // color: 0x0C2D4D
+        opacity: .8,
+        color: 0x1D5BFF
       });
 
       let asteroids = new THREE.Group();
