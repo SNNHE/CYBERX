@@ -342,7 +342,7 @@
       });
 
       let planet = new THREE.Mesh(
-        new THREE.SphereGeometry(140, 60, 60),
+        new THREE.SphereGeometry(130, 60, 60),
         material
       );
 
@@ -360,7 +360,7 @@
       let asteroids = new THREE.Group();
 
       let asteroid = new THREE.Mesh(
-        new THREE.SphereGeometry(180, 60, 60),
+        new THREE.SphereGeometry(150, 60, 60),
         materialW
       );
       asteroids.add(asteroid);
@@ -379,7 +379,7 @@
         requestAnimationFrame(render);
 
         planet.rotation.y += 0.011;
-        planet.rotation.z -= 0.0005;
+        // planet.rotation.z -= 0.0005;
 
         asteroids.rotation.y += -0.003;
 
