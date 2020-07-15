@@ -625,7 +625,6 @@
 }
 .contact .contact-right {
   float: right;
-  width: 30%;
   font-size: 16px;
   font-weight: 400;
   color: #fff;
@@ -634,6 +633,7 @@
 }
 .contact .contact-right .contact-user {
   float: left;
+  margin-right: 73px;
 }
 .contact .contact-right .contact-serve {
   float: right;
