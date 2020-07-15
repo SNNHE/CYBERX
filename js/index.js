@@ -196,13 +196,14 @@
           winScrollT = $(window).scrollTop();
         let offsetTop = itemOffTop - navHeight;
         let offsetBottom = itemOffTop + itemHeight - navHeight;
-        if(winScrollT + winH == docH){ 
+        if(winScrollT + winH + 20 >= docH){ 
+          console.log(winScrollT, winH, docH)
           // console.log('说明滚动到底部了')
           removeActive(navTitleList);
           return;
         }
         $(this).removeClass('active')
-        console.log('offsetTop', offsetTop, winScrollT, 'winScrollT', offsetBottom, 'offsetBottom', winScrollT > offsetTop, winScrollT < offsetBottom);
+        // console.log('offsetTop', offsetTop, winScrollT, 'winScrollT', offsetBottom, 'offsetBottom', winScrollT > offsetTop, winScrollT < offsetBottom);
         if (winScrollT > offsetTop && winScrollT < offsetBottom) {
           $(this).addClass('active');
         }
@@ -336,7 +337,7 @@
       var system = new THREE.Group(); // planetary system
 
       scene.add(
-        new THREE.AmbientLight(0xFFFFFF, 0.6)
+        new THREE.AmbientLight(0xFFFFFF, 2)
       );
 
       let light = new THREE.DirectionalLight(0xFFFFFF, 3);
@@ -364,7 +365,7 @@
         side: THREE.DoubleSide,
         transparent: true,
         opacity: .8,
-        color: "rgb(58, 114, 255)"
+        color: 0X3E76F9
       });
 
       let asteroids = new THREE.Group();
