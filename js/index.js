@@ -355,7 +355,7 @@
         side: THREE.DoubleSide,
         transparent: true,
         opacity: .8,
-        color: 0x1D5BFF
+        color: 0x3E76F9
       });
 
       let asteroids = new THREE.Group();
