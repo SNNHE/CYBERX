@@ -65,7 +65,13 @@
 	},
 	"contact": {
 		"title": "Contact_",
-		"copyrights": "© CyberX 2020   |   Terms&Conditions   |   Privacy Policy   |  Support",
-		"business": " <p>Email: business@cyberx.com</p><p> Weibo: CyberX</p> <p>Twitter: CyberX_Official</p>"
+		"business": " <p>Email: business@cyberx.com</p><p> Weibo: CyberX</p> <p>Twitter: CyberX_Official</p>",
+		"user": "User agreement",
+		"userAgree": "<p>User agreement</p><p> Privacy policy</p>",
+		"serve": "Service support",
+		"help": "<a href='https://cyberxhelp.zendesk.com/'>Help center</a><a href='https://cyberxhelp.zendesk.com/hc/en-us/requests/new'>Submit the repair order</a>"
+	},
+	"footer": {
+		"copyrights": "© CyberX 2020   |   Terms&Conditions   |   Privacy Policy   |  Support"
 	}
 }

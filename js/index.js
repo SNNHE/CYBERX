@@ -4,6 +4,7 @@
   let	height = container.clientHeight;
   let pageRender = (function () {
     var winH = $(window).height();
+    var docH =  $(document).height();
     function saveCookie(cookieName, cookieValue, cookieDates) {
       var d = new Date();
       d.setDate(d.getDate() + cookieDates);
@@ -184,8 +185,8 @@
     }
 
     function navMonitor() {
-      width = container.clientWidth;
-      height = container.clientHeight;
+      // width = container.clientWidth;
+      // height = container.clientHeight;
       let navHeight = 20 + 109,
       navTitleList = $('.nav-tab .title');
       navTitleList.each(function () {
@@ -195,15 +196,23 @@
           winScrollT = $(window).scrollTop();
         let offsetTop = itemOffTop - navHeight;
         let offsetBottom = itemOffTop + itemHeight - navHeight;
-        if (itemHeight < winH) {
-          offsetTop = offsetTop - (winH - itemHeight);
+        if(winScrollT + winH == docH){ 
+          // console.log('说明滚动到底部了')
+          removeActive(navTitleList);
+          return;
         }
         $(this).removeClass('active')
-        // console.log('offsetTop', offsetTop, winScrollT, 'winScrollT', offsetBottom, 'offsetBottom', winScrollT > offsetTop, winScrollT < offsetBottom);
+        console.log('offsetTop', offsetTop, winScrollT, 'winScrollT', offsetBottom, 'offsetBottom', winScrollT > offsetTop, winScrollT < offsetBottom);
         if (winScrollT > offsetTop && winScrollT < offsetBottom) {
           $(this).addClass('active');
         }
       })
+    }
+
+    function removeActive(navTitleList){
+      let last = $('#last');
+      navTitleList.removeClass('active');
+      last.addClass('active');
     }
 
     function scrollEvent() {
@@ -355,7 +364,7 @@
         side: THREE.DoubleSide,
         transparent: true,
         opacity: .8,
-        color: 0x3E76F9
+        color: "rgb(58, 114, 255)"
       });
 
       let asteroids = new THREE.Group();
