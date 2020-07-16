@@ -4,11 +4,13 @@ const  HtmlWebpackPlugin = require('html-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserWebpackPlugin = require('terser-webpack-plugin'); 
 
 module.exports = {
   entry: {
     index: './js/index.js',
   },
+  mode: 'production',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].mins.js',
@@ -69,6 +71,18 @@ module.exports = {
 
   optimization: {
     minimizer: [
+
+      // 表示放优化的插件
+      new TerserWebpackPlugin({
+        parallel: true, // 开启多进程并行压缩
+        cache: true, // 开启缓存 第一次bulid代码时用时Time: 3088ms, 第二次Time: 1178ms 第三次Time: 863ms
+        terserOptions: {
+          output: {
+            comments: false,
+          },
+        },
+        // extractComments: 'all',
+      }),
       new OptimizeCssPlugin({
         assetNameRegExp: /\.css$/g,
         cssProcessorOptions:{
