@@ -37,7 +37,7 @@ module.exports = {
             options: {
               limit: 0,
               outputPath: 'images',
-              publicPath: './images',
+              publicPath: '../images',
             }
           },
           {
