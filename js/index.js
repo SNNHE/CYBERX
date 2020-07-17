@@ -1,4 +1,4 @@
-// import '../css/index.css';
+import '../css/index.css';
   let container = document.getElementById("_img");
   let width = container.clientWidth > 1700 ? 1700 : container.clientWidth;
   let	height = 900;
@@ -110,7 +110,7 @@
         new ScrollMagic.Scene({
           triggerElement: `#${target[0]}`,
           offset,
-          triggerHook: .95,
+          triggerHook: .75,
           duration: 200,
         }).setPin($(`.${target[1]}`)).setTween(tl).addTo(controller);
       })
@@ -235,8 +235,9 @@
         paginationClickable: true,
         speed:800,
         autoplay:4400,
+        loop: true,
         autoplayDisableOnInteraction: false,
-        effect: 'fade',
+        // effect: 'fade',
       })
     }
 
