@@ -233,8 +233,8 @@ import '../css/index.css';
       swiper = new Swiper('#banner .swiper-container', {
         pagination: '#banner .swiper-pagination',
         paginationClickable: true,
-        // speed:800,
-        // autoplay:4400,
+        speed:800,
+        autoplay:4400,
         autoplayDisableOnInteraction: false,
         effect: 'fade',
       })
