@@ -321,14 +321,14 @@ import '../css/index.css';
 
 
     function loadEarth() {
-      let container = document.getElementById("_img");
-      container.innerHTML = '';
-      let width = container.clientWidth > 1350 ? 1350 : container.clientWidth;
+      let container = $("#_img");
+      container.html('');
+      let width = container.width() > 1350 ? 1350 : container.width();
       let	height = 900;
       let aspect = width / height;
       let renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
       renderer.setSize(width, height);
-      container.appendChild(renderer.domElement);
+      container.append(renderer.domElement);
 
       let scene = new THREE.Scene();
 
