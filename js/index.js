@@ -305,12 +305,13 @@ import '../css/index.css';
     function lang(language) {
       $.i18n.init({
         // locales/'+language+'/translation.json
+        fallbackLng: [],
         lng: language, //指定语言
         resGetPath: `./locales/${language}/translate.json`,
-        ns: {
-          namespaces: ['translation', 'message'],
-          defaultNs: 'translation' //默认使用的，不指定namespace时
-        }
+        // ns: {
+        //   namespaces: ['translation', 'message'],
+        //   defaultNs: 'translation' //默认使用的，不指定namespace时
+        // }
       }, function (err, t) {
         $('[data-i18n]').i18n(); // 通过选择器集体翻译
         $('[data-i18n-html]').each(function () {
