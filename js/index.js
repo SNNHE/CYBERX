@@ -324,7 +324,7 @@ import '../css/index.css';
       let container = $("#_img");
       container.html('');
       console.log('e.width()=====',container.width())
-      let width = container.width() > 1350 ? 1350 : container.width();
+      let width = container.width() > 1350 ? 1350 : container.width() - 50;
       let	height = 900;
       let aspect = width / height;
       let renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
