@@ -1,7 +1,7 @@
-import '../css/index.css';
+// import '../css/index.css';
   let container = document.getElementById("_img");
-  let width = container.clientWidth;
-  let	height = container.clientHeight;
+  let width = container.clientWidth > 1700 ? 1700 : container.clientWidth;
+  let	height = 900;
   let pageRender = (function () {
     var winH = $(window).height();
     var docH =  $(document).height();
