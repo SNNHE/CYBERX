@@ -322,6 +322,7 @@ import '../css/index.css';
 
     function loadEarth() {
       let container = document.getElementById("_img");
+      container.innerHTML = '';
       let width = container.clientWidth > 1350 ? 1350 : container.clientWidth;
       let	height = 900;
       let aspect = width / height;
