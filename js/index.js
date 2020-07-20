@@ -1,4 +1,160 @@
 import '../css/index.css';
+  (function () {
+    let _bind = function (fn, arg) {
+      // console.log(fn, 'fn');
+      return function () {
+        return fn.apply(arg, arguments);
+      }
+    }
+    this.StackedCards = (function() {
+      function StackedCards(options) {
+        let opt = options || {};
+        this.options = this._extends(opt, {
+          layout: "slide",
+          onClick: undefined,
+          transformOrigin: "center",
+          selector: 'ul'
+        });
+        this.draw = _bind(this.draw, this);
+        // console.log(this.options)
+        this.init();
+       };
+       StackedCards.prototype._extends = function(opt, defaults) {
+        let key, value;
+        for (const k in defaults) {
+            value = defaults[k];
+            if (opt[k] == null) {
+              opt[k] = value
+            } 
+        }
+        return opt;
+       }
+        StackedCards.prototype.init = function(){
+            // console.log('object')
+          console.log(this);
+          this.element = window.document.documentElement;
+          let ref = document.readyState;
+          if (ref === 'inter' || ref === 'complete') {
+            this.draw();
+          } else {
+            document.addEventListener("DOMContentLoaded", this.draw)
+          }
+  
+        }
+  
+        StackedCards.prototype.draw = function() {
+          let self = this;
+          // console.log(this, 'this draw')
+          let selector = self.options.selector;
+          let els = self.els = document.querySelectorAll(selector + ' li');
+          // console.log('els',els)
+          self.parent = els[0].parentNode;
+          let getItemHeight = els[0].getBoundingClientRect().height;
+          els[0].parentNode.style.height = parseInt(getItemHeight) + 'px';
+          // 求中间索引
+          let lenAdjust = els.length % 2 == 0 ? -2 : -1;
+          let oneHalf = (lenAdjust + els.length) / 2;
+          var activeTransform ="translate(" + -50 + "%, 0%)  scale(1)";
+          // this.detectSwipe();
+          [].forEach.call(els, function(el) {
+            el.style.transformOrigin = self.options.transformOrigin;
+            console.log(self);
+            el.addEventListener('mouseenter', _bind(_enter,self), false);
+          })
+          function _enter(e, el){
+              let enterEl = el || e.target;
+              let nextCnt = 0,// 后面的个数
+               prevCnt = 0;// 前面的个数
+              el = el || e.target;
+              do {
+                let next = enterEl.nextElementSibling;
+                nextCnt = nextCnt + 1;
+              } while(enterEl = enterEl.nextElementSibling);
+              enterEl = el || e.target;
+              do {
+                let prev = enterEl.previousElementSibling;
+                prevCnt = prevCnt + 1;
+              } while(enterEl = enterEl.previousElementSibling);
+              self.addTransformsOnenter(nextCnt - 1, prevCnt - 1);
+              self.loopNodeList(els, function(el) {
+                el.classList.remove("active");
+              });
+              el.classList.add("active");
+              el.classList.add(self.options.layout);
+              el.style.zIndex = els.length * 5;
+              el.style.transform = activeTransform;
+              if (self.options.onClick !== undefined) {
+                self.options.onClick(el);
+              }
+            }
+            console.log(els[oneHalf], oneHalf, 'els[oneHalf]')
+          _enter.call(self,null,els[oneHalf])
+        }
+        StackedCards.prototype.addTransformsOnenter = function(nextCnt, prevCnt){
+          let z = 10;
+          let els = [].slice.call(this.els);
+          let scale = 1, tarnslateX = 0, rotate = "";
+          let layout = this.options.layout;
+          let maxCutDivisor = Math.max(prevCnt, nextCnt);
+          let prevDivisor = 60 / maxCutDivisor;
+          let nextDivisor = 60 / maxCutDivisor;
+          if (prevCnt > nextCnt) {
+            scale = 1 / (prevCnt + 1);
+          } else {
+            scale = 1 - prevCnt * (1 / (nextCnt + 3));
+          }
+          for(var i = 0; i < prevCnt; i++) {
+            switch(layout) {
+              case "slide": 
+                if (i > 0) {
+                  scale = scale + 1 / (maxCutDivisor + 1); // 0.5的基础上越来越大
+                }
+                tarnslateX = -50 - prevDivisor * (prevCnt - i);
+                rotate = "rotate(0deg)";
+                break;
+              default: 
+                tarnslateX = (150 - prevDivisor * 2 * i) * -1;
+                rotate = "rotate(0deg)";
+            }
+            let styleStr = `translate(${tarnslateX}%, 0%) scale(${scale}) ${rotate}`;
+            console.log(styleStr, 'styleStr')
+            z = z + 1;
+            els[i].style.transform = styleStr;
+            els[i].style.zIndex = z;
+          }
+          z = z - 1;
+          let j = 0;
+          scale = 1;
+          for(var i = prevCnt + 1; i < nextCnt + prevCnt + 1; i++) {
+            j = j + 1;
+            switch (layout) {
+              case "slide":
+                scale = scale - 1 / (maxCutDivisor + 3);// 0.5的基础上越来越小；
+                tarnslateX = (50 - nextDivisor * j) * -1;// 从左到右越来越大
+                rotate = "rotate(0deg)";
+                break;
+            
+              default:
+                tarnslateX = (50 - prevDivisor * 2 * i) * -1;
+                rotate = "rotate(0deg)";
+                break;
+            }
+            let styleStr = `translate(${tarnslateX}%, 0%) scale(${scale}) ${rotate}`;
+            console.log(styleStr, 'styleStr')
+            z = z - 1;
+            els[i].style.transform = styleStr;
+            els[i].style.zIndex = z;
+          }
+        }
+        StackedCards.prototype.loopNodeList = function(els, callback, scope) {
+          for(var i = 0; i< els.length; i++) {
+            callback.call(scope, els[i]);
+          }
+        }
+      return StackedCards
+    })()
+  }).call(this)
+
   let pageRender = (function () {
     var winH = $(window).height();
     var docH =  $(document).height();
@@ -57,12 +213,12 @@ import '../css/index.css';
         // console.log( $.trim($(this).text()), ' $(this).text();')
         if (text === 'English') {
           $(this).find('.text').text('简体中文');
-          hasClass ? null : changeImg.addClass('zhbg');
+          // hasClass ? null : changeImg.addClass('zhbg');
           lang("zh");
           saveCookie("language", "zh", 1);
         } else {
           $(this).find('.text').text('English');
-          hasClass ? changeImg.removeClass('zhbg') : null;
+          // hasClass ? changeImg.removeClass('zhbg') : null;
           lang("en");
           saveCookie("language", "en", 1);
         }
@@ -193,7 +349,7 @@ import '../css/index.css';
           winScrollT = $(window).scrollTop();
         let offsetTop = itemOffTop - navHeight;
         let offsetBottom = itemOffTop + itemHeight - navHeight;
-        if(winScrollT + winH + 20 >= docH){ 
+        if(winScrollT + winH + 50 >= docH){ 
           console.log(winScrollT, winH, docH)
           // console.log('说明滚动到底部了')
           removeActive(navTitleList);
@@ -238,67 +394,6 @@ import '../css/index.css';
       })
     }
 
-    function load3DSwiper() {
-      new Swiper('#industryBanner .swiper-container', {
-        watchSlidesProgress: true,
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        loopedSlides: 3,
-        loop: true,
-        pagination: '#industryBanner .swiper-pagination',
-        paginationClickable: true,
-        onProgress: function (swiper, progress) {
-          console.log('onProgress');
-          let curSlide = swiper.slides[swiper.activeIndex];
-          $(curSlide).css('opacity', 1);
-          $(curSlide).prev().css('opacity', .3);
-          $(curSlide).next().css('opacity', .3);
-          for (let i = 0; i < swiper.slides.length; i++) {
-            var slide = swiper.slides.eq(i);
-            var slideProgress = swiper.slides[i].progress;
-            var modify = 1;
-            if (Math.abs(slideProgress) > 1) {
-              modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
-            }
-            var translate = slideProgress * modify * 337.5 + 'px';
-            var scale = 1 - Math.abs(slideProgress) / 5;
-            var zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
-            slide.transform('translateX(' + translate + ') scale(' + scale + ')');
-            slide.css('zIndex', zIndex);
-            // slide.css('opacity', 1);
-            if (Math.abs(slideProgress) > 1) {
-              slide.css('opacity', 0);
-            }
-          }
-        },
-        onSetTransition: function (swiper, transition) {
-          for (var i = 0; i < swiper.slides.length; i++) {
-            var slide = swiper.slides.eq(i)
-            slide.transition(transition);
-          }
-        },
-        onInit: function (swiper) {
-          const curSlide = swiper.slides[swiper.activeIndex];
-          $(curSlide).prev().css('opacity', .3);
-          $(curSlide).next().css('opacity', .3);
-        },
-        onSlideChangeEnd: function (swiper) {
-          //swiper-slide-active
-          const curSlide = swiper.slides[swiper.activeIndex];
-          $(curSlide).css('opacity', 1);
-          $(curSlide).prev().css('opacity', .3);
-          $(curSlide).next().css('opacity', .3);
-          // console.log(' swiper.slides',  swiper.slides, curSlide, $(curSlide).prev(), $(curSlide).next())
-        },
-        //处理分页器bug
-        // onSlideChangeStart: function(swiper) {
-        // 	if (swiper.activeIndex == 4) {
-        // 		swiper.bullets.eq(9).addClass('swiper-pagination-bullet-active');
-        // 		console.log(swiper.bullets.length);
-        // 	}
-        // }
-      });
-    }
 
     function lang(language) {
       $.i18n.init({
@@ -324,7 +419,7 @@ import '../css/index.css';
       let container = $("#_img");
       container.html('');
       console.log('e.width()=====',container.width())
-      let width = container.width() > 1350 ? 1350 : container.width() - 50;
+      let width = container.width() - 50;
       let	height = 900;
       let aspect = width / height;
       let renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -393,10 +488,10 @@ import '../css/index.css';
       function render() {
         requestAnimationFrame(render);
 
-        planet.rotation.y += 0.011;
+        planet.rotation.y += 0.0008;
         // planet.rotation.z -= 0.0005;
 
-        asteroids.rotation.y += -0.003;
+        asteroids.rotation.y += -0.001;
 
         renderer.render(scene, camera);
       }
@@ -413,7 +508,9 @@ import '../css/index.css';
         scrollMonitor();
         loadScrollMagic();
         loadSwiper();
-        load3DSwiper();
+        // load3DSwiper();
+        console.log(window.StackedCards)
+        new StackedCards({selector: '.stacked-ul'})
       }
     }
   })()

@@ -61,7 +61,8 @@
 		"date": "2020.20.20"
 	},
 	"global": {
-		"title": "Global Location"
+		"title": "Global Location",
+		"location": "<p><span>|  San Francisco</span><span>   |  Beijing  |</span>      <span>Hongkong   |</span></p>"
 	},
 	"contact": {
 		"title": "Contact_",
