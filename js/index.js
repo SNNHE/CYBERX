@@ -153,7 +153,7 @@ import '../css/index.css';
         }
       return StackedCards
     })()
-  }).call(this)
+  }).call(window)
 
   let pageRender = (function () {
     var winH = $(window).height();
@@ -250,7 +250,7 @@ import '../css/index.css';
       // })
 
       //
-      ['technology tec-introduce', 'technology tec-info-text', 'ourTeam team-introduce', 'industryBanner industry-title', 'industryBanner industry-slides', 'globalLocation global-title', 'globalLocation earth-location'].forEach(function (item, i) {
+      ['technology tec-introduce', 'technology tec-info-text', 'ourTeam team-introduce', 'industryBanner industry-title', 'industryBanner stacked-cards', 'globalLocation global-title', 'globalLocation earth-location'].forEach(function (item, i) {
         let target = item.split(' ');
         // console.log(object)
         let offset = $(`.${target[1]}`).hasClass('scroll-delay') ? 450 : 100;
