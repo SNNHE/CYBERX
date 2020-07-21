@@ -53,6 +53,9 @@
     background-color: #2141BD;
   }
 }
+body {
+  font-size: 14px ;
+}
 .nav {
   position: fixed;
   top: 0;
@@ -60,6 +63,9 @@
   width: 100%;
   height: 70px;
   background: #151726;
+}
+.nav::before {
+  display: none;
 }
 .nav .nav-container {
   -webkit-display: flex;
@@ -317,7 +323,6 @@
   display: flex;
   justify-content: center;
   border-radius: 17px;
-  font-size: 14px;
   color: #dbdbdb;
   font-weight: 300;
 }
@@ -393,6 +398,16 @@
   line-height: 30px;
   letter-spacing: 1px;
 }
+.our-team .team-crad-ul {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  display: flex;
+  max-width: 1200px;
+  margin: 276px auto 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .our-team .team-introduce {
   display: flex;
   justify-content: center;
@@ -407,22 +422,11 @@
   width: 819px;
   margin-left: 148px;
 }
-.our-team ul {
-  -webkit-display: flex;
-  -moz-display: flex;
-  -ms-display: flex;
-  display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 .our-team .team-card {
   width: 243px;
   height: 480px;
   margin-bottom: 50px;
   padding: 0 18px;
-  font-size: 14px;
   font-weight: 400;
   color: #dbdbdb;
   line-height: 24px;
@@ -484,7 +488,6 @@
   color: #377de1;
 }
 .industry-banner {
-  height: 1000px;
   padding: 230px 0 20px 0;
   background: #111320;
   font-size: 24px;
@@ -573,6 +576,9 @@
 .industry-banner .slide-card.active:after {
   display: none;
 }
+.industry-banner .industry-slides {
+  display: none;
+}
 .global-location {
   background: #111320;
   color: #fff;
@@ -590,7 +596,7 @@
   margin-top: 158px;
   background: url(../images/map.png) no-repeat top 0 center;
 }
-.global-location .global-location {
+.global-location .global-text {
   padding: 100px 0 150px 0;
   text-align: center;
   color: #214dbd;
@@ -660,4 +666,433 @@
   color: #82828e;
   line-height: 24px;
   letter-spacing: 0px;
+}
+@media screen and (max-width: 1200px) and (min-width: 940px) {
+  .main-block {
+    padding: 0 0.6rem;
+    height: 10rem;
+  }
+  .main-block .main-right-earth {
+    display: none;
+  }
+  .main-block .main-left-text .title {
+    display: inline-block;
+    font-size: 0.64rem;
+    line-height: 0.64rem;
+  }
+  .main-block .main-left-text .title:nth-last-child(2) {
+    margin-bottom: 0.48rem;
+  }
+  .main-block .main-left-text .text-print {
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    margin-bottom: 1rem;
+  }
+  .banner .slide {
+    display: block;
+  }
+  .banner .slide .slide-text {
+    position: absolute;
+    top: 3rem;
+    padding: 0 0.4rem;
+  }
+  .banner .slide .slide-img {
+    height: 4rem;
+  }
+  .banner .slide .slide-title {
+    margin-bottom: 0.9rem;
+  }
+  .banner .slide-two .slide-img {
+    transform: translate(-1.5rem, 0);
+  }
+  .industry-banner {
+    padding: 0.4rem;
+  }
+  .industry-banner .swiper-pagination-bullet {
+    background: #fff;
+  }
+  .industry-banner .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #007aff;
+  }
+  .industry-banner .stacked-cards {
+    display: none;
+  }
+  .industry-banner .industry-slides {
+    display: block;
+    height: 6rem;
+    padding: 1.2rem 0;
+  }
+  .industry-banner .industry-title {
+    margin-bottom: 0;
+    font-size: 0.7rem;
+  }
+  .industry-banner .industry-title p {
+    display: inline-block;
+    text-align: left;
+    word-break: break-word;
+  }
+  .industry-banner .industry-title p:nth-last-child(1) {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .industry-banner .slide-card {
+    position: static;
+    opacity: 1;
+    height: 100%;
+    box-shadow: inset 1px 1px 6px 0px #007aff;
+  }
+}
+@media screen and (max-width: 940px) and (min-width: 810px) {
+  .main-block {
+    padding: 0 0.6rem;
+    height: 10rem;
+  }
+  .main-block .main-right-earth {
+    display: none;
+  }
+  .main-block .main-left-text .title {
+    display: inline-block;
+    font-size: 0.64rem;
+    line-height: 0.64rem;
+  }
+  .main-block .main-left-text .title:nth-last-child(2) {
+    margin-bottom: 0.48rem;
+  }
+  .main-block .main-left-text .text-print {
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    margin-bottom: 1rem;
+  }
+  .banner .slide {
+    display: block;
+  }
+  .banner .slide .slide-text {
+    position: absolute;
+    top: 3rem;
+    padding: 0 0.4rem;
+  }
+  .banner .slide .slide-img {
+    height: 4rem;
+  }
+  .banner .slide .slide-title {
+    margin-bottom: 0.9rem;
+  }
+  .banner .slide-two .slide-img {
+    transform: translate(-1.5rem, 0);
+  }
+  .technology .tec-introduce {
+    padding: 0 0.4rem;
+  }
+  .technology .tec-introduce .tec-title {
+    padding: 0.77rem 0;
+  }
+  .industry-banner {
+    padding: 0.4rem;
+  }
+  .industry-banner .swiper-pagination-bullet {
+    background: #fff;
+  }
+  .industry-banner .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #007aff;
+  }
+  .industry-banner .stacked-cards {
+    display: none;
+  }
+  .industry-banner .industry-slides {
+    display: block;
+    height: 6rem;
+    padding: 1.2rem 0;
+  }
+  .industry-banner .industry-title {
+    margin-bottom: 0;
+    font-size: 0.7rem;
+  }
+  .industry-banner .industry-title p {
+    display: inline-block;
+    text-align: left;
+    word-break: break-word;
+  }
+  .industry-banner .industry-title p:nth-last-child(1) {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .industry-banner .slide-card {
+    position: static;
+    opacity: 1;
+    height: 100%;
+    box-shadow: inset 1px 1px 6px 0px #007aff;
+  }
+  .contact {
+    height: auto;
+    overflow: hidden;
+    padding: 0.4rem;
+  }
+  .contact .contact-right {
+    display: none;
+  }
+}
+@media screen and (max-width: 810px) and (min-width: 640px) {
+  html {
+    font-size: 59px;
+  }
+  .technology .technology-bg {
+    background-position: left 0 top 0;
+  }
+  .industry-banner .industry-title p:nth-last-child(1) {
+    top: 0;
+  }
+}
+@media screen and (max-width: 810px) {
+  body {
+    font-size: 0.24rem;
+    word-break: break-all;
+  }
+  .nav {
+    height: 1rem;
+  }
+  .nav .nav-tab,
+  .nav .language {
+    display: none;
+  }
+  .nav .logo {
+    float: left;
+  }
+  .nav .nav-container {
+    display: block;
+    padding-top: 0.25rem;
+    padding-left: 0.67rem;
+  }
+  .nav .m-icon {
+    float: right;
+    padding-right: 0.84rem;
+  }
+  .nav .m-icon .iconfont {
+    display: block;
+    width: 0.4rem;
+    margin-bottom: 0.1rem;
+    height: 0.05rem;
+    background: #fff;
+  }
+  .nav.openNav {
+    height: 100%;
+  }
+  .nav.openNav .nav-tab {
+    position: absolute;
+    top: 1rem;
+    display: block;
+  }
+  .nav.openNav .nav-tab a {
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+  .main-block {
+    padding: 0 0.6rem;
+    height: 10rem;
+  }
+  .main-block .main-right-earth {
+    display: none;
+  }
+  .main-block .main-left-text .title {
+    display: inline-block;
+    font-size: 0.64rem;
+    line-height: 0.64rem;
+  }
+  .main-block .main-left-text .title:nth-last-child(2) {
+    margin-bottom: 0.48rem;
+  }
+  .main-block .main-left-text .text-print {
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    margin-bottom: 1rem;
+  }
+  .banner .slide {
+    display: block;
+  }
+  .banner .slide .slide-text {
+    position: absolute;
+    top: 2rem;
+    padding: 0 0.4rem;
+    font-size: 0.32rem;
+  }
+  .banner .slide .slide-img {
+    position: absolute;
+    width: 100%;
+    height: 3rem;
+    top: 0;
+  }
+  .banner .slide .slide-title {
+    margin-bottom: 0.9rem;
+    font-size: 0.64rem;
+    line-height: 0.64rem;
+  }
+  .banner .slide-two .slide-img {
+    transform: translate(-0.5rem, 0);
+  }
+  .banner .swiper-pagination-bullet {
+    width: 0.75rem;
+    height: 0.04rem;
+  }
+  .technology {
+    text-align: left;
+  }
+  .technology .tec-introduce {
+    padding: 0 0.4rem;
+  }
+  .technology .tec-introduce .tec-title {
+    padding: 0.77rem 0;
+  }
+  .technology .tec-introduce .tec-title p {
+    font-size: 0.64rem;
+  }
+  .technology .tec-cards {
+    padding: 0 0.4rem;
+  }
+  .technology .tec-cards .card-img {
+    margin: 0;
+  }
+  .technology .card-sub-info {
+    padding: 0;
+  }
+  .technology .tec-cards {
+    display: block;
+  }
+  .technology .tec-cards .card {
+    width: 100%;
+    margin: 0;
+  }
+  .technology .tec-cards .card:hover {
+    box-shadow: none;
+  }
+  .technology .technology-bg {
+    background-position: left 0 top 0;
+  }
+  .technology .tec-introduce .tec-info-text {
+    width: 100%;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+  }
+  .our-team {
+    font-size: 0.32rem;
+    line-height: 0.4rem;
+    background-size: auto;
+  }
+  .our-team .team-crad-ul {
+    display: block;
+    margin-top: 1.5rem;
+  }
+  .our-team .team-card {
+    width: 100%;
+    padding: 0 0.4rem;
+    box-sizing: border-box;
+  }
+  .our-team .team-introduce {
+    display: block;
+    margin-top: 1.28rem;
+    padding: 0 0.4rem;
+  }
+  .our-team .team-info {
+    margin: 0;
+    width: 100%;
+  }
+  .our-team .team-title {
+    margin-bottom: 1.28rem;
+    font-size: 0.64rem;
+  }
+  .our-team .team-title p:nth-last-child(1) {
+    display: inline-block;
+    position: relative;
+    top: -0.2rem;
+  }
+  .our-team .team-title p:nth-last-child(2) {
+    display: inline-block;
+  }
+  .industry-banner {
+    padding: 0.4rem;
+    font-size: 0.24rem;
+    line-height: 0.24rem;
+  }
+  .industry-banner .swiper-pagination-bullet {
+    background: #fff;
+  }
+  .industry-banner .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #007aff;
+  }
+  .industry-banner .stacked-cards {
+    display: none;
+  }
+  .industry-banner .industry-slides {
+    display: block;
+    height: 3.5rem;
+    padding: 1.2rem 0;
+  }
+  .industry-banner .industry-title {
+    margin-bottom: 0;
+    font-size: 0.7rem;
+  }
+  .industry-banner .industry-title p {
+    display: inline-block;
+    text-align: left;
+    word-break: break-word;
+  }
+  .industry-banner .industry-title p:nth-last-child(1) {
+    position: relative;
+    top: -1rem;
+    left: 0.5rem;
+  }
+  .industry-banner .slide-card {
+    position: static;
+    opacity: 1;
+    height: 100%;
+    box-shadow: inset 1px 1px 6px 0px #007aff;
+  }
+  .industry-banner .slide-card .text {
+    padding: 0.54rem 1rem 0.8rem 0.5rem;
+  }
+  .industry-banner .slide-card .slide-bottom .profile-pho {
+    width: 0.86rem;
+    height: 0.86rem;
+  }
+  .industry-banner .slide-card .slide-bottom .profile-name {
+    margin-top: 0.17rem;
+    font-size: 0.28rem;
+    line-height: 0.28rem;
+  }
+  .industry-banner .slide-card .slide-bottom .date {
+    margin: 0.52rem 1rem 0 0;
+  }
+  .global-location .global-title {
+    padding: 0.4rem;
+    text-align: left;
+  }
+  .global-location .global-title p {
+    display: inline;
+    word-break: break-word;
+    font-size: 0.8rem;
+  }
+  .global-location .global-title p:nth-last-child(1) {
+    position: relative;
+    top: -0.24rem;
+  }
+  .global-location .earth-location {
+    height: 4.5rem;
+    margin-top: 1.5rem;
+    background-size: cover ;
+  }
+  .global-location .global-text {
+    padding: 0 0.4rem 1.5rem;
+    font-size: 0.25rem;
+  }
+  .contact {
+    height: auto;
+    overflow: hidden;
+    padding: 0.4rem;
+  }
+  .contact .contact-right {
+    display: none;
+  }
+  .copyrights {
+    font-size: 0.2rem;
+  }
 }

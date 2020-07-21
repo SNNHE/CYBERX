@@ -1,4 +1,4 @@
-import '../css/index.css';
+// import '../css/index.css';
   (function () {
     let _bind = function (fn, arg) {
       // console.log(fn, 'fn');
@@ -96,8 +96,8 @@ import '../css/index.css';
           let scale = 1, tarnslateX = 0, rotate = "";
           let layout = this.options.layout;
           let maxCutDivisor = Math.max(prevCnt, nextCnt);
-          let prevDivisor = 60 / maxCutDivisor;
-          let nextDivisor = 60 / maxCutDivisor;
+          let prevDivisor = 50 / maxCutDivisor;
+          let nextDivisor = 50 / maxCutDivisor;
           if (prevCnt > nextCnt) {
             scale = 1 / (prevCnt + 1);
           } else {
@@ -158,6 +158,20 @@ import '../css/index.css';
   let pageRender = (function () {
     var winH = $(window).height();
     var docH =  $(document).height();
+    function isPhone() {
+      let userAgent = navigator.userAgent;
+      let mobile = ['Android', 'iPhone', 'SymbianOS', 'iPad', 'Windows Phone', 'iPod'];
+      let flag = false;
+      for (let v = 0; v < mobile.length; v++) {
+        const cur = mobile[v];
+        if (userAgent.indexOf(cur) > 0) {
+          flag = true;
+          break;
+        }   
+      }
+      return flag;
+    }
+
     function saveCookie(cookieName, cookieValue, cookieDates) {
       var d = new Date();
       d.setDate(d.getDate() + cookieDates);
@@ -250,10 +264,11 @@ import '../css/index.css';
       // })
 
       //
-      ['technology tec-introduce', 'technology tec-info-text', 'ourTeam team-introduce', 'industryBanner industry-title', 'industryBanner stacked-cards', 'globalLocation global-title', 'globalLocation earth-location'].forEach(function (item, i) {
+      ['technology tec-introduce', 'technology tec-info-text', 'ourTeam team-introduce', 'industryBanner industry-title', 'industryBanner stacked-cards','industryBanner industry-slides',  'globalLocation global-title', 'globalLocation earth-location'].forEach(function (item, i) {
         let target = item.split(' ');
         // console.log(object)
         let offset = $(`.${target[1]}`).hasClass('scroll-delay') ? 450 : 100;
+        offset = $(`.${target[1]}`).hasClass('scroll-delay') && isPhone() ? 250 : 80;
         let tl = TweenMax.fromTo($(`.${target[1]}`), 1, {
           opacity: 0
         }, {
@@ -263,7 +278,7 @@ import '../css/index.css';
         new ScrollMagic.Scene({
           triggerElement: `#${target[0]}`,
           offset,
-          triggerHook: .75,
+          triggerHook: isPhone() ? .65 : .75,
           duration: 200,
         }).setPin($(`.${target[1]}`)).setTween(tl).addTo(controller);
       })
@@ -324,7 +339,7 @@ import '../css/index.css';
     function showSwiper() {
       let slide = $('.slide'),
         win = $(window),
-        slideOffsetTop = slide.offset().top + 240,
+        slideOffsetTop = isPhone() ? slide.offset().top + 140  : slide.offset().top + 240,
         winScrollTop = win.scrollTop(),
         winH = win.height();
       // console.log('slideOffsetTop', slideOffsetTop - winScrollTop, winH)
@@ -340,6 +355,7 @@ import '../css/index.css';
     function navMonitor() {
       // width = container.clientWidth;
       // height = container.clientHeight;
+      if (isPhone()) return;
       let navHeight = 20 + 109,
       navTitleList = $('.nav-tab .title');
       navTitleList.each(function () {
@@ -386,14 +402,32 @@ import '../css/index.css';
       swiper = new Swiper('#banner .swiper-container', {
         pagination: '#banner .swiper-pagination',
         paginationClickable: true,
-        speed:800,
-        autoplay:4400,
+        // speed:800,
+        // autoplay:4400,
         loop: true,
         autoplayDisableOnInteraction: false,
         // effect: 'fade',
       })
     }
-
+    function load3DSwiper() {
+      new Swiper('#industryBanner .swiper-container', {
+        // watchSlidesProgress: true,
+        // slidesPerView: 'auto',
+        // centeredSlides: true,
+        // loopedSlides: 3,
+        loop: true,
+        autoplayDisableOnInteraction: false,
+        pagination: '#industryBanner .swiper-pagination',
+        paginationClickable: true,
+        //处理分页器bug
+        // onSlideChangeStart: function(swiper) {
+        // 	if (swiper.activeIndex == 4) {
+        // 		swiper.bullets.eq(9).addClass('swiper-pagination-bullet-active');
+        // 		console.log(swiper.bullets.length);
+        // 	}
+        // }
+      });
+    }
 
     function lang(language) {
       $.i18n.init({
@@ -497,6 +531,20 @@ import '../css/index.css';
       }
       render();
     }
+    function navMinBar () {
+      let $mIcon = $(".m-icon"),
+          $nav = $('.nav'),
+          $navTab = $('.nav-tab');
+      if (!$mIcon) return;
+      $mIcon.on('click', function() {
+        let has = $nav.hasClass('openNav');
+        if (has) {
+          $nav.removeClass('openNav');
+        } else {
+          $nav.addClass('openNav')
+        }
+      })
+    }
 
     return {
       init() {
@@ -508,9 +556,12 @@ import '../css/index.css';
         scrollMonitor();
         loadScrollMagic();
         loadSwiper();
-        // load3DSwiper();
-        console.log(window.StackedCards)
-        new StackedCards({selector: '.stacked-ul'})
+        navMinBar();
+        load3DSwiper();
+        // console.log(window.StackedCards)
+        new StackedCards({selector: '.stacked-ul'});
+        window.addEventListener('resize', throttle(navMinBar, 800), false);
+        window.addEventListener('resize', throttle(showSwiper, 800), false);
       }
     }
   })()
