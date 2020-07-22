@@ -23,22 +23,8 @@
 	<script defer src="js/i18next.min.1.11.2.js"></script>
 	<script defer src="js/three.min.js"></script>
 	<script>
-		~(function(){
-			window.addEventListener('resize', computed, false);
-			function computed() {
-				var deviceW = document.documentElement.clientWidth;
-				// if ( 640 < deviceW < 810) {
-				// 	document.documentElement.style.fontSize = 59 + 'px';
-				// 	return
-				// }
-				if (deviceW >= 625)  {
-					document.documentElement.style.fontSize = 59 + 'px';
-					return
-				}
-				document.documentElement.style.fontSize = deviceW / 640 * 100 + 'px';
-			}
-			computed();
-		})()
+		~(function(){window.addEventListener('resize', computed, false);function computed() {var deviceW = document.documentElement.clientWidth;
+				if (deviceW >= 625)  {	document.documentElement.style.fontSize = 59 + 'px';return}document.documentElement.style.fontSize = deviceW / 640 * 100 + 'px';}computed();})()
 	</script>
 </head>
 
@@ -572,8 +558,8 @@
 				<div class="title" data-i18n="contact.serve">Service support</div>
 				<div class="serve">
 					<div class="" data-i18n-html="contact.help">
-						<a href="https://cyberxhelp.zendesk.com/">Help center</a>
-						<a href="https://cyberxhelp.zendesk.com/hc/en-us/requests/new">Submit the repair order</a>
+						<a href="https://cyberxhelp.zendesk.com/" target="_blank">Help center</a>
+						<a href="https://cyberxhelp.zendesk.com/hc/en-us/requests/new" target="_blank">Submit the repair order</a>
 					</div>
 				</div>
 			</div>

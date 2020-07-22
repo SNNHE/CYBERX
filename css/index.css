@@ -896,6 +896,7 @@ body {
   }
   .main-block .main-left-text .title {
     display: inline-block;
+    margin-right: 0.2rem;
     font-size: 0.64rem;
     line-height: 0.64rem;
   }
