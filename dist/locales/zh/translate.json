@@ -10,7 +10,7 @@
 	"main":{
 			"Essentail":"Essentail",
 			"Trading":"Trading",
-			"Platfrom":"Platfrom",
+			"Platfrom":"Platfrom<span class='cursor animation'></span>",
 			"textPrint":"Founded in 2016, CyberX is the leading prime broker in crypto space specializing in trading execution, market making, OTC and lending"
 	},
 	"banner":{
@@ -29,7 +29,7 @@
 			"fourB":"· Integrating liquidity from all major   exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms"
 	},
 	"technology":{
-			"Driven":"Driven",
+			"Driven":"Technology Driven",
 			"DrivenText":"CyberX is a technology driven company. CyberX team is creating a powerful and flexible platform to provide full range of services and products by utilizing latest advancements in blockchain, mathematical modeling, deep learning, financial engineering, and data mining.",
 			"Artificial":"Artificial",
 			"Intelligence":"Intelligence",
