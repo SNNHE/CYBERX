@@ -31,7 +31,7 @@
        }
         StackedCards.prototype.init = function(){
             // console.log('object')
-          console.log(this);
+          // console.log(this);
           this.element = window.document.documentElement;
           let ref = document.readyState;
           if (ref === 'inter' || ref === 'complete') {
@@ -58,7 +58,7 @@
           // this.detectSwipe();
           [].forEach.call(els, function(el) {
             el.style.transformOrigin = self.options.transformOrigin;
-            console.log(self);
+            // console.log(self);
             el.addEventListener('mouseenter', _bind(_enter,self), false);
           })
           function _enter(e, el){
@@ -87,7 +87,7 @@
                 self.options.onClick(el);
               }
             }
-            console.log(els[oneHalf], oneHalf, 'els[oneHalf]')
+            // console.log(els[oneHalf], oneHalf, 'els[oneHalf]')
           _enter.call(self,null,els[oneHalf])
         }
         StackedCards.prototype.addTransformsOnenter = function(nextCnt, prevCnt){
@@ -117,7 +117,7 @@
                 rotate = "rotate(0deg)";
             }
             let styleStr = `translate(${tarnslateX}%, 0%) scale(${scale}) ${rotate}`;
-            console.log(styleStr, 'styleStr')
+            // console.log(styleStr, 'styleStr')
             z = z + 1;
             els[i].style.transform = styleStr;
             els[i].style.zIndex = z;
@@ -140,7 +140,7 @@
                 break;
             }
             let styleStr = `translate(${tarnslateX}%, 0%) scale(${scale}) ${rotate}`;
-            console.log(styleStr, 'styleStr')
+            // console.log(styleStr, 'styleStr')
             z = z - 1;
             els[i].style.transform = styleStr;
             els[i].style.zIndex = z;
@@ -208,13 +208,16 @@
     function splitText() {
       $('#textPrint').css('opacity', 1);
       let target = $('#textPrint');
-      let split = new SplitText(target, { type: 'chars' });
+      let lan = getCookie("language") || "en";
+      let type = lan === 'en' ? 'words' : 'chars';
+      console.log(type, lan, '-==')
+      let split = new SplitText(target, { type });
       let tl = new TimelineMax();
       tl.staggerFrom(
-        split.chars,
-        0.5,
-        { opcity: 0, scale: 0, y: 0, ease: Elastic.easeInOut },
-        0.05
+        type === 'words' ? split.words : split.chars,
+        0.8,
+        { opcity: 0, scale: 0, y: 0, ease:Elastic.easeInOut},
+        0.1
       );
     }
 
@@ -366,7 +369,7 @@
         let offsetTop = itemOffTop - navHeight;
         let offsetBottom = itemOffTop + itemHeight - navHeight;
         if(winScrollT + winH + 50 >= docH){ 
-          console.log(winScrollT, winH, docH)
+          // console.log(winScrollT, winH, docH)
           // console.log('说明滚动到底部了')
           removeActive(navTitleList);
           return;
@@ -452,7 +455,7 @@
     function loadEarth() {
       let container = $("#_img");
       container.html('');
-      console.log('e.width()=====',container.width())
+      console.log('e.width()=====',container.width());
       let width = container.width() - 50;
       let	height = 900;
       let aspect = width / height;
@@ -548,7 +551,7 @@
 
     return {
       init() {
-        let langType = getCookie("language") || "en";
+         let langType = getCookie("language") || "en";
         lang(langType);
         loadEarth();
         splitText();

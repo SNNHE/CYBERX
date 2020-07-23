@@ -646,6 +646,10 @@ body {
   float: left;
   margin-right: 73px;
 }
+.contact .contact-right .contact-user a {
+  display: block;
+  color: #fff;
+}
 .contact .contact-right .contact-serve {
   float: right;
 }
@@ -733,8 +737,7 @@ body {
   }
   .industry-banner .industry-title p:nth-last-child(1) {
     position: relative;
-    top: 0;
-    left: 0;
+    top: -0.2rem;
   }
   .industry-banner .slide-card {
     position: static;
@@ -815,8 +818,7 @@ body {
   }
   .industry-banner .industry-title p:nth-last-child(1) {
     position: relative;
-    top: 0;
-    left: 0;
+    top: -0.2rem;
   }
   .industry-banner .slide-card {
     position: static;
@@ -841,7 +843,7 @@ body {
     background-position: left 0 top 0;
   }
   .industry-banner .industry-title p:nth-last-child(1) {
-    top: 0;
+    top: -0.2rem;
   }
 }
 @media screen and (max-width: 810px) {
@@ -947,6 +949,13 @@ body {
   .technology .tec-introduce .tec-title p {
     font-size: 0.64rem;
   }
+  .technology .tec-introduce .tec-title p:nth-last-child(1) {
+    display: none;
+  }
+  .technology .tec-introduce .tec-title p::after {
+    content: '_';
+    vertical-align: text-top;
+  }
   .technology .tec-cards {
     padding: 0 0.4rem;
   }
@@ -1030,6 +1039,7 @@ body {
   }
   .industry-banner .industry-title {
     margin-bottom: 0;
+    text-align: left;
     font-size: 0.7rem;
   }
   .industry-banner .industry-title p {
@@ -1037,10 +1047,12 @@ body {
     text-align: left;
     word-break: break-word;
   }
+  .industry-banner .industry-title p::after {
+    content: "_";
+    vertical-align: text-top;
+  }
   .industry-banner .industry-title p:nth-last-child(1) {
-    position: relative;
-    top: -1rem;
-    left: 0.5rem;
+    display: none;
   }
   .industry-banner .slide-card {
     position: static;
@@ -1070,11 +1082,14 @@ body {
   .global-location .global-title p {
     display: inline;
     word-break: break-word;
-    font-size: 0.8rem;
+    font-size: 0.64rem;
   }
   .global-location .global-title p:nth-last-child(1) {
-    position: relative;
-    top: -0.24rem;
+    display: none;
+  }
+  .global-location .global-title p::after {
+    content: "_";
+    vertical-align: top;
   }
   .global-location .earth-location {
     height: 4.5rem;

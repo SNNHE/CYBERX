@@ -67,8 +67,8 @@
 	"contact": {
 		"title": "Contact_",
 		"business": " <p>Email: business@cyberx.com</p><p> Weibo: CyberX</p> <p>Twitter: CyberX_Official</p>",
-		"user": "User agreement",
-		"userAgree": "<p>User agreement</p><p> Privacy policy</p>",
+		"user": "Terms of Use",
+		"userAgree": "<a href='https://cyberxhelp.zendesk.com/hc/zh-cn/articles/360051353614-Terms-of-Use' target='_blank'>Terms of Use</a> <a href='https://cyberxhelp.zendesk.com/hc/zh-cn/articles/360051353734-Privacy-Policy' target='_blank'> Privacy policy</a>",
 		"serve": "Service support",
 		"help": "<a href='https://cyberxhelp.zendesk.com/'>Help center</a><a href='https://cyberxhelp.zendesk.com/hc/en-us/requests/new'>Submit the repair order</a>"
 	},

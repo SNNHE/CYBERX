@@ -764,6 +764,10 @@ body {
     .contact-user {
       float: left;
       margin-right: 73px;
+      a {
+        display: block;
+        color: #fff;
+      }
     }
     .contact-serve {
       float: right;
@@ -874,8 +878,9 @@ body {
       word-break: break-word;
       &:nth-last-child(1) {
         position: relative;
-        top: 0;
-        left: 0;
+        top: -0.2rem;
+        // top: 0;
+        // left: 0;
       }
     }
   }
@@ -973,8 +978,9 @@ body {
       word-break: break-word;
       &:nth-last-child(1) {
         position: relative;
-        top: 0;
-        left: 0;
+        top: -0.2rem;
+        // top: 0;
+        // left: 0;
       }
     }
   }
@@ -1016,7 +1022,7 @@ body {
   .industry-banner{
     .industry-title {
       p:nth-last-child(1) {
-        top: 0;
+        top: -0.2rem;
       }
     }
   } 
@@ -1137,6 +1143,13 @@ body {
       padding: .77rem 0;
       p {
         font-size: .64rem;
+        &:nth-last-child(1) {
+          display: none;
+        }
+        &::after {
+          content: '_';
+          vertical-align: text-top;
+        }
       }
     }
   }
@@ -1217,6 +1230,7 @@ body {
   padding: .4rem;
   font-size: .24rem;
   line-height: .24rem;
+  
   .swiper-pagination-bullet {
     background: #fff;
   }
@@ -1233,15 +1247,18 @@ body {
   }
   .industry-title {
     margin-bottom: 0;
+    text-align: left;
     font-size: .7rem;
     p {
       display: inline-block;
       text-align: left;
       word-break: break-word;
+      &::after {
+        content: "_";
+        vertical-align: text-top;
+      }
       &:nth-last-child(1) {
-        position: relative;
-        top: -1rem;
-        left: .5rem;
+        display: none;
       }
     }
   }
@@ -1280,10 +1297,13 @@ body {
     p {
       display: inline;
       word-break: break-word;
-      font-size: .8rem;
+      font-size: .64rem;
       &:nth-last-child(1) {
-        position: relative;
-        top: -.24rem;
+        display: none;
+      }
+      &::after {
+        content: "_";
+        vertical-align: top;
       }
     }
   }

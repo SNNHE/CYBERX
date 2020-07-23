@@ -27,14 +27,11 @@
 			window.addEventListener('resize', computed, false);
 			function computed() {
 				var deviceW = document.documentElement.clientWidth;
-				// if ( 640 < deviceW < 810) {
-				// 	document.documentElement.style.fontSize = 59 + 'px';
-				// 	return
-				// }
-				if (deviceW >= 625)  {
+				if (`${deviceW}`.indexOf('6') >= 0)  {
 					document.documentElement.style.fontSize = 59 + 'px';
 					return
 				}
+				if (deviceW > 640) return
 				document.documentElement.style.fontSize = deviceW / 640 * 100 + 'px';
 			}
 			computed();
@@ -83,9 +80,9 @@
 				<!-- text -->
 				<div class="main-left-text">
 					<p class="title" data-i18n="main.Essentail">Essentail</p>
-					<p class="title">Trading</p>
-					<p class="title">Platfrom<span class="cursor animation"></span></p>
-					<p class="text-print" id="textPrint">Founded in 2016, CyberX is the leading
+					<p class="title" data-i18n="main.Trading">Trading</p>
+					<p class="title" data-i18n-html="main.Platfrom">Platfrom<span class="cursor animation"></span></p>
+					<p class="text-print" id="textPrint" data-i18n="main.textPrint">Founded in 2016, CyberX is the leading
 						prime broker in crypto space specializing
 						in trading execution, market making, OTC and lending</p>
 				</div>
@@ -564,11 +561,12 @@
 			</div>
 		<div class="contact-right">
 			<div class="contact-user">
-				<div class="title" data-i18n="contact.user">User agreement</div>
+				<div class="title" data-i18n="contact.user">Terms of Use</div>
 				<div class="user">
 					<div class="" data-i18n-html="contact.userAgree">
-						<p>User agreement</p>
-						<p> Privacy policy</p>
+						<a href="https://cyberxhelp.zendesk.com/hc/zh-cn/articles/360051353734-Privacy-Policy
+						" target="_blank">Terms of Use	</a>
+						<a href="https://cyberxhelp.zendesk.com/hc/zh-cn/articles/360051353614-Terms-of-Use" target="_blank"> Privacy policy</a>
 					</div>
 				</div>
 			</div>
