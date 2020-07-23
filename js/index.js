@@ -447,6 +447,7 @@
         $('[data-i18n-html]').each(function () {
           var date_name = $(this).attr("data-i18n-html");
           $(this).html($.t(date_name));
+          splitText();
         });
       });
     }
@@ -554,7 +555,6 @@
          let langType = getCookie("language") || "en";
         lang(langType);
         loadEarth();
-        splitText();
         checkLanguage();
         scrollMonitor();
         loadScrollMagic();
