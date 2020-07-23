@@ -948,6 +948,7 @@ body {
   }
   .technology .tec-introduce .tec-title p {
     font-size: 0.64rem;
+    word-break: break-word;
   }
   .technology .tec-introduce .tec-title p:nth-last-child(1) {
     display: none;
