@@ -565,7 +565,7 @@ import '../css/index.css';
         navMinBar();
         load3DSwiper();
         // console.log(window.StackedCards)
-        new StackedCards({selector: '.stacked-ul'});
+        // new StackedCards({selector: '.stacked-ul'});
         window.addEventListener('resize', throttle(navMinBar, 800), false);
         window.addEventListener('resize', throttle(showSwiper, 800), false);
       

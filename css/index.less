@@ -479,15 +479,23 @@ body {
 // ourTeam
 .our-team {
   // height: 1720px;
+  padding-bottom: 140px;
   background: #0F1223 url(../images/ourteambg.png) no-repeat;
   background-size: contain;
   border: 3px solid #0F1223;
   background-origin: border-box;
   // color: #fff;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 200;
   line-height: 30px;
   letter-spacing: 1px;
+  img {
+    display: block;
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+  }
   .team-crad-ul {
 
     .pre(display, flex);
@@ -511,6 +519,9 @@ body {
   .team-info {
     width: 819px;
     margin-left: 148px;
+    p {
+      font-size: 20px;
+    }
   }
   .team-card {
     width: 243px;
@@ -623,13 +634,7 @@ body {
   color: #dbdbdb;
   line-height: 36px;
   letter-spacing: 1px;
-  img {
-    display: block;
-    width: 90%;
-    max-width: 900px;
-    margin: auto;
-    position: relative;
-  }
+
   .stacked-cards {
     position: relative;
     // max-width: 767px;
@@ -1216,6 +1221,7 @@ body {
   font-size: .32rem;
   line-height: .4rem;
   background-size: auto;
+  
   .team-crad-ul {
     display: block;
     margin-top: 1.5rem;
