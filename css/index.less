@@ -69,6 +69,11 @@
 // }
 body {
     font-size: 14px ;
+    color: #fff;
+    a {
+      display: block;
+      color: #fff;
+    }
 }
 
 .nav {
@@ -170,7 +175,7 @@ body {
   line-height: 30px;
   font-size: 20px;
   font-weight: 200;
-  color: #ffffff;
+  // color: #ffffff;
   opacity: 0;
 }
 
@@ -225,7 +230,7 @@ body {
 .banner .slide {
   height: 574px;
   background: #101227;
-  color: #ffffff;
+  // color: #ffffff;
 }
 .banner {
   .slide-one {
@@ -339,7 +344,7 @@ body {
    .slide-title {
     //  margin: 0 auto 90px;
     margin-bottom: 90px;
-    font-size: 40px;
+    font-size: 45px;
     font-weight: 400;
     line-height: 45px;  
     letter-spacing: -1px;
@@ -382,7 +387,7 @@ body {
     }
     .tec-title p{
       font-size: 45px;
-      color: #214dbd;
+      // color: #fff;
       line-height: 50px;
       letter-spacing: -1px;
     }
@@ -391,7 +396,7 @@ body {
       margin: 0 auto; 
       font-size: 20px;
       font-weight: 200;
-      color: #ffffff;
+      // color: #ffffff;
       line-height: 30px;
       letter-spacing: 0px;
     }
@@ -454,7 +459,7 @@ body {
   .card-title {
     margin-bottom: 55px;
     font-weight: 500;
-    color: #fff;
+    // color: #fff;
     font-size: 16px;
     line-height: 24px;
   }
@@ -478,7 +483,7 @@ body {
   background-size: contain;
   border: 3px solid #0F1223;
   background-origin: border-box;
-  color: #fff;
+  // color: #fff;
   font-size: 20px;
   font-weight: 200;
   line-height: 30px;
@@ -509,7 +514,8 @@ body {
   }
   .team-card {
     width: 243px;
-    height: 480px;
+    // height: 480px;
+    max-height: 540px;
     margin-bottom: 50px;
     padding: 0 18px;
     // font-size: 14px;
@@ -520,15 +526,25 @@ body {
     opacity: 0;
     .pre(transform,  translateX(-40px));
     .pre(transition,  all 0.6s ease-out);
+    &:nth-last-child(1) {
+      &:hover {
+        background: none;
+      }
+    }
     &:hover {
       background: #214dbd;
       .name {
         color: #ffffff;
       }
     }
-    p {
-      word-break: break-all;
+    .cfa {
+      float: right;
+      color: #fff;
+      font-size: 20px;
     }
+    // p {
+    //   word-break: break-all;
+    // }
     .top {
       border-top: 6px solid #214dbd;
     }
@@ -600,13 +616,20 @@ body {
 // industry-banner
 .industry-banner {
   // height: 1000px;
-  padding: 230px 0 20px 0;
+  padding: 230px 0;
   background: #111320;
   font-size: 24px;
   font-weight: 300;
   color: #dbdbdb;
   line-height: 36px;
   letter-spacing: 1px;
+  img {
+    display: block;
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+  }
   .stacked-cards {
     position: relative;
     // max-width: 767px;
@@ -657,7 +680,7 @@ body {
         margin-top: 17px;
         font-size: 28px;
         font-weight: 400;
-        color: #ffffff;
+        // color: #ffffff;
         line-height: 28px;
         letter-spacing: -1px;
       }
@@ -695,7 +718,7 @@ body {
 .global-location {
   // height: 1000px;
   background: #111320;
-  color: #fff;
+  // color: #fff;
   // overflow: hidden;
   .global-title {
     // margin-bottom: 158px;
@@ -757,24 +780,24 @@ body {
     // width: 30%;
     font-size: 16px;
     font-weight: 400;
-    color: #fff;
+    // color: #fff;
     line-height: 28px;
     letter-spacing: 0px;
     
     .contact-user {
       float: left;
       margin-right: 73px;
-      a {
-        display: block;
-        color: #fff;
-      }
+      // a {
+      //   display: block;
+      //   color: #fff;
+      // }
     }
     .contact-serve {
       float: right;
-      a {
-        display: block;
-        color: #fff;
-      }
+      // a {
+      //   display: block;
+      //   color: #fff;
+      // }
     }
     .title {
       margin: 64px 0 31px 0;
@@ -1184,7 +1207,7 @@ body {
     .tec-info-text {
       width: 100%;
       font-size: .32rem;
-      line-height: .32rem;
+      // line-height: .32rem;
     }
   }  
 }

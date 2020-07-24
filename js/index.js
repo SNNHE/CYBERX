@@ -1,4 +1,4 @@
-// import '../css/index.css';
+import '../css/index.css';
   (function () {
     let _bind = function (fn, arg) {
       // console.log(fn, 'fn');
@@ -267,7 +267,7 @@
       // })
 
       //
-      ['technology tec-introduce', 'technology tec-info-text', 'ourTeam team-introduce', 'industryBanner industry-title', 'industryBanner stacked-cards','industryBanner industry-slides',  'globalLocation global-title', 'globalLocation earth-location'].forEach(function (item, i) {
+      ['technology tec-introduce', 'technology tec-info-text', 'ourTeam team-introduce', 'industryBanner industry-title', 'industryBanner stacked-img','industryBanner industry-slides',  'globalLocation global-title', 'globalLocation earth-location'].forEach(function (item, i) {
         let target = item.split(' ');
         // console.log(object)
         let offset = $(`.${target[1]}`).hasClass('scroll-delay') ? 450 : 100;
@@ -553,7 +553,10 @@
     return {
       init() {
          let langType = getCookie("language") || "en";
+         let $language = $('.nav .language');
         lang(langType);
+        console.log(langType);
+        langType === 'en' ? $language.find('.text').text('English'): $language.find('.text').text('简体中文');
         loadEarth();
         checkLanguage();
         scrollMonitor();
@@ -565,6 +568,7 @@
         new StackedCards({selector: '.stacked-ul'});
         window.addEventListener('resize', throttle(navMinBar, 800), false);
         window.addEventListener('resize', throttle(showSwiper, 800), false);
+      
       }
     }
   })()

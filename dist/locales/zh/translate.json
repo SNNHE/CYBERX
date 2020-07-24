@@ -8,71 +8,88 @@
 	},
 	"logo":"company LOGO",
 	"main":{
-			"Essentail":"Essentail",
-			"Trading":"Trading",
-			"Platfrom":"Platfrom<span class='cursor animation'></span>",
-			"textPrint":"Founded in 2016, CyberX is the leading prime broker in crypto space specializing in trading execution, market making, OTC and lending"
+			"Essentail":"链接",
+			"Platfrom":"资产<span class='cursor animation'></span>",
+			"textPrint":"成立于2016年，CyberX是一家领先的主经纪商在加密领域提供交易执行，做市，金融，和资金管理等"
 	},
 	"banner":{
-			"Trading":"Trading",
-			"Execution":"Execution",
-			"oneA":"· Integrating liquidity from all major   exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms",
-			"oneB":"· Integrating liquidity from all major   exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms",
-			"Market":"Market",
-			"Making":"Making",
-			"twoA":"· Integrating liquidity from all major   exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms",
-			"twoB":"· Integrating liquidity from all major   exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms",
-			"OTC":"OTC",
-			"threeA":"· Integrating liquidity from all major   exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms",
-			"threeB":"· Integrating liquidity from all major   exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms",
-			"fourA":"· Integrating liquidity from all major   exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms",
-			"fourB":"· Integrating liquidity from all major   exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms"
+			"Trading":"交易",
+			"Execution":"执行",
+			"oneA":"· 整合所有主流交易所的流动性，以及通过利用我们最佳的智能路由和交易算法来提供市场上最佳的执行策略 ",
+			"oneB":"· 为我们的交易用户提供自主研发的交易终端，其具备顶级的安全性和交易算法（比如TWAP/VWAP）",
+			"Market":"做市",
+			"Making":"市场",
+			"twoA":"· 为加密货币交易所、钱包和支付端产品的现货和衍生品定制做市解决方案",
+			"twoB":"· 提供各个层面的流动性，缓和任何规模的交易对市场波动的影响，以及缩小买卖价差，确保交易者得到前所未有的交易经验。",
+			"OTC":"场外交易",
+			"threeA":"· 在我们的自营流动性支持下，可在场外交易平台上即时执行场外交易，提供最具市场竞争力的价差",
+			"threeB":"· 7X24小时为用户支持主要加密货币的最佳报价和结算方案",
+			"Financing":"融资",
+			"fourA":"· 为您提供一站式融资解决方案，包括抵押贷款、做空、保证金交易等，以优化资金效率，提升您横跨多个交易所的交易策略规模",
+			"fourB":"· 所有主要币种均按市场最佳利率出借，贷币供应量大，期限灵活以及利率固定"
 	},
 	"technology":{
-			"Driven":"Technology Driven",
-			"DrivenText":"CyberX is a technology driven company. CyberX team is creating a powerful and flexible platform to provide full range of services and products by utilizing latest advancements in blockchain, mathematical modeling, deep learning, financial engineering, and data mining.",
-			"Artificial":"Artificial",
-			"Intelligence":"Intelligence",
-			"Ainfo":"<p>   ·· Deep Learning - Market’s  micro-structure analysis to predict price direction </p>  <p>  · Natural Language Processing - Data mining for market and social sentiment monitoring</p>   <p>· Machine Learning - Token white list screening  </p>",
-			"Binfo":"<p>   ·· Deep Learning - Market’s  micro-structure analysis to predict price direction </p>  <p>  · Natural Language Processing - Data mining for market and social sentiment monitoring</p>   <p>· Machine Learning - Token white list screening  </p>",
-			"Cinfo":"<p>   ·· Deep Learning - Market’s  micro-structure analysis to predict price direction </p>  <p>  · Natural Language Processing - Data mining for market and social sentiment monitoring</p>   <p>· Machine Learning - Token white list screening  </p>"
+			"Driven":"技术驱动",
+			"DrivenText":"CyberX是一家技术驱动型公司，我们的服务和产品充分利用了区块链技术、数学模型、深度学习、金融工程和数据挖掘等领域最新的进展来驱动.",
+			"Artificial":"人工",
+			"Intelligence":"智能",
+			"Ainfo":"<p>   ·深度学习-市场微观结构分析，预测价格走势 </p>  <p>  · 自然语言处理-市场和社会情绪监测的数据挖掘</p>   <p>· 机器学习-标记白名单筛选代币  </p>",
+			"Blockchain":"区块链",
+			"Binfo":"<p>   ·实时链上划转分析 </p>  <p>  · 挖矿成本分析</p>   <p>· 代币生态系统分析  </p>",
+			"Financial":"金融",
+			"Engineering":"工程",
+			"Cinfo":"<p>   ·同行业领先的低延迟交易引擎</p>  <p>  · 量化策略池</p>   <p>· 大量交易算法支持的选择  </p>   <p>· 数个亚洲交易策略奖的获得者  </p>  <p>· 衍生品定价/风险建模  </p>  "
 	},
 	"ourteam":{
-		"learn": "Learn More",
-			"Our":"Our",
-			"Team":"Team",
-			"info":"Our team consists of veterans from Wall Street banks Goldman Sachs, UBS, Merrill Lynch, top tier funds Citadel, AQR, Blackrock, GSA and Tech leaders Google, Baidu, Thompson Reuters. The founder of CyberX also previously co-founded the first cryptocurrency wallet company in China, Bihang.com in 2013, which was acquired by OKCoin (now known as OKEx).",
-			"Aname": "Hao Wang",
-			"Amiddle": "<p>CFA</p> <p>10 Year+Crypto/Blockchain/Quant</p>",
-			"Abottom": " <p> Bihang.com</p><p>Co-founder</p> <p>Goldman Sachs, Tokyo, FICC</p><p>Quant</p><p>University of Tokyo</p><p> Mathematic</p>",
-			"Bname": "Hao Wang",
-			"Byear": "10 Year+",
-			"Bmiddle": "<p>CFA</p> <p>10 Year+Crypto/Blockchain/Quant</p>",
-			"Bbottom": " <p> Bihang.com</p><p>Co-founder</p> <p>Goldman Sachs, Tokyo, FICC</p><p>Quant</p><p>University of Tokyo</p><p> Mathematic</p>"
+			"learn":"Learn More",
+			"Profile":"简介 ",
+			"Team":"团队",
+			"info":"我们的团队成员分别来自于高盛、瑞银、美林等华尔街投行，顶级基金Citadel、AQR、贝莱德、GSA以及科技巨头谷歌、百度、Thompson Reuters等。CyberX的创始人在2013年联合创立了中国第一家加密货币钱包公司Bihang.com，后被OKCoin(现在的OKEx)收购。",
+			"Aname":"Hao Wang",
+			"Amiddle":" <p>10 年 + </p> <p>数字货币 / 区块链 / 量化交易经验</p>",
+			"Abottom":" <p> 币行</p><p>联合创始人</p> <p>高盛，东京，固收量化</p><p>量化交易经验</p><p>东京大学</p><p> 数学专业</p>",
+			"Bname":"CH Tang",
+			"Bmiddle":"<p>CFA</p> <p>10 年 + 量化交易经验</p>",
+			"Bbottom":" <p> GSA Capital Partners </p><p>高级研究员</p><p>JT Capital Management</p> <p>高级研究员</p><p>贝莱德（BlackRock）集团 </p><p>经理</p>",
+			"Cname":"Kevin Xu",
+			"Cmiddle":"<p>CFA</p ><p>10 年 + 算法交易 / 量化交易经验</p >",
+			"Cbottom":" <p> 美林证券</p ><p>量化策略负责人/全球市场执行董事</p ><p>AQR Capital (管理规模 1700 亿美元) </p ><p> 量化分析师</p ><p> 哥伦比亚大学</p ><p> 金融工程</p ><p> 清华大学</p ><p> A.I 自动化系</p >",
+			"Dname":"Dr. Yue ",
+			"Dmiddle":"<p>CFA</p ><p>10 年 + 量化交易经验</p >",
+			"Dbottom":" <p> 国内某量化私募基金</p ><p>总经理</p ><p>大型共同基金</p ><p> 定量交易主管</p ><p>美国城堡基金 </p ><p> 量化分析师</p ><p> 美国威斯康星大学</p ><p> 麦迪逊分校统计专业博士</p ><p> 北京大学</p ><p> 数学专业</p >",
+			"Ename":"Zack Fan",
+			"Emiddle":"<p>10 年 + </p><p>金融产品设计 / 机构客户销售经验</p >",
+			"Ebottom":" <p> 瑞士银行,固收</p ><p>副董事</p ><p>花旗银行金融市场部</p ><p>副总监</p><p>加州大学伯克利分校</p ><p> 金融工程</p >",
+			"Fname":"Qin Liu",
+			"Fmiddle":"<p>10 年 + 机器学习 / 数据工程经验</p >",
+			"Fbottom":" <p> Kaggle人工智能比赛</p ><p>金牌获得者</p ><p>谷歌，硅谷总部</p ><p>人工智能专家</p><p>多伦多大学</p ><p>人工智能硕士</p ><p> 加拿大滑铁卢大学</p ><p> 计算机系</p >",
+			"Gname":"Harry Wong",
+			"Gmiddle":"<p>CFA</p > <p>5年+咨询行业经验</p >",
+			"Gbottom":" <p> Bitocean Global</p ><p>联合创始人&COO</p ><p>德勤</p ><p>企业财务顾问，高级经理</p > <p>不列颠哥伦比亚大学</p >"
 	},
-	"industry": {
-		"title": "Industry Thoughts",
-		"onetxt": "“I just started using CyberX for trading. Wow. This is really the best trading experience. What in the world have I been waiting for? Exceeding expectations.”",
-		"onename": "<p >Peter</p> <p class='position'>Trader</p>",
-		"twotxt": "“I just started using CyberX for trading. Wow. This is really the best trading experience. What in the world have I been waiting for? Exceeding expectations.”",
-		"twoname": "<p>Peter</p> <p class='position'>Trader</p>",
-		"threetxt": "“I just started using CyberX for trading. Wow. This is really the best trading experience. What in the world have I been waiting for? Exceeding expectations.”",
-		"threename": "<p >Peter</p> <p class='position'>Trader</p>",
-		"date": "2020.20.20"
+	"industry":{
+			"title":"Industry Thoughts",
+			"onetxt":"“I just started using CyberX for trading. Wow. This is really the best trading experience. What in the world have I been waiting for? Exceeding expectations.”",
+			"onename":"<p >Peter</p> <p class='position'>Trader</p>",
+			"twotxt":"“I just started using CyberX for trading. Wow. This is really the best trading experience. What in the world have I been waiting for? Exceeding expectations.”",
+			"twoname":"<p>Peter</p> <p class='position'>Trader</p>",
+			"threetxt":"“I just started using CyberX for trading. Wow. This is really the best trading experience. What in the world have I been waiting for? Exceeding expectations.”",
+			"threename":"<p >Peter</p> <p class='position'>Trader</p>",
+			"date":"2020.20.20"
 	},
-	"global": {
-		"title": "Global Location",
-		"location": "<p><span>|  San Francisco</span><span>   |  Beijing  |</span>      <span>Hongkong   |</span></p>"
+	"global":{
+			"title":"Global Location",
+			"location":"<p><span>| 旧金山</span><span>   |  北京  |</span>      <span>香港   |</span></p>"
 	},
-	"contact": {
-		"title": "Contact_",
-		"business": " <p>Email: business@cyberx.com</p><p> Weibo: CyberX</p> <p>Twitter: CyberX_Official</p>",
-		"user": "Terms of Use",
-		"userAgree": "<a href='https://cyberxhelp.zendesk.com/hc/zh-cn/articles/360051353614-Terms-of-Use' target='_blank'>Terms of Use</a> <a href='https://cyberxhelp.zendesk.com/hc/zh-cn/articles/360051353734-Privacy-Policy' target='_blank'> Privacy policy</a>",
-		"serve": "Service support",
-		"help": "<a href='https://cyberxhelp.zendesk.com/'>Help center</a><a href='https://cyberxhelp.zendesk.com/hc/en-us/requests/new'>Submit the repair order</a>"
+	"contact":{
+			"title":"Contact_",
+			"business":" <p>Email: business@cyberx.com</p><p> Weibo:CyberX行业观察</p> <p>Twitter: CyberX_Official</p>",
+			"user":"用户协议",
+			"userAgree":"<a href='https://cyberxhelp.zendesk.com/hc/zh-cn/articles/360051353614-Terms-of-Use' target='_blank'>用户协议</a> <a href='https://cyberxhelp.zendesk.com/hc/zh-cn/articles/360051353734-Privacy-Policy' target='_blank'> 隐私政策</a>",
+			"serve":"服务支持",
+			"help":"<a href='https://cyberxhelp.zendesk.com/'>帮助中心</a><a href='https://cyberxhelp.zendesk.com/hc/en-us/requests/new'>提交工单</a>"
 	},
-	"footer": {
-		"copyrights": "© CyberX 2020   |   Terms&Conditions   |   Privacy Policy   |  Support"
+	"footer":{
+			"copyrights":"© CyberX 2020   |   Terms&Conditions   |   Privacy Policy   |  Support"
 	}
 }

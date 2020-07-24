@@ -55,6 +55,11 @@
 }
 body {
   font-size: 14px ;
+  color: #fff;
+}
+body a {
+  display: block;
+  color: #fff;
 }
 .nav {
   position: fixed;
@@ -149,7 +154,6 @@ body {
   line-height: 30px;
   font-size: 20px;
   font-weight: 200;
-  color: #ffffff;
   opacity: 0;
 }
 .main-block .main-right-earth {
@@ -182,7 +186,6 @@ body {
 .banner .slide {
   height: 574px;
   background: #101227;
-  color: #ffffff;
 }
 .banner .slide-one .slide-text {
   flex: 1 1 35%;
@@ -261,7 +264,7 @@ body {
 }
 .banner .slide .slide-title {
   margin-bottom: 90px;
-  font-size: 40px;
+  font-size: 45px;
   font-weight: 400;
   line-height: 45px;
   letter-spacing: -1px;
@@ -303,7 +306,6 @@ body {
 }
 .technology .tec-introduce .tec-title p {
   font-size: 45px;
-  color: #214dbd;
   line-height: 50px;
   letter-spacing: -1px;
 }
@@ -312,7 +314,6 @@ body {
   margin: 0 auto;
   font-size: 20px;
   font-weight: 200;
-  color: #ffffff;
   line-height: 30px;
   letter-spacing: 0px;
 }
@@ -372,7 +373,6 @@ body {
 .technology .card-title {
   margin-bottom: 55px;
   font-weight: 500;
-  color: #fff;
   font-size: 16px;
   line-height: 24px;
 }
@@ -392,7 +392,6 @@ body {
   background-size: contain;
   border: 3px solid #0F1223;
   background-origin: border-box;
-  color: #fff;
   font-size: 20px;
   font-weight: 200;
   line-height: 30px;
@@ -424,7 +423,7 @@ body {
 }
 .our-team .team-card {
   width: 243px;
-  height: 480px;
+  max-height: 540px;
   margin-bottom: 50px;
   padding: 0 18px;
   font-weight: 400;
@@ -441,14 +440,19 @@ body {
   -ms-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
 }
+.our-team .team-card:nth-last-child(1):hover {
+  background: none;
+}
 .our-team .team-card:hover {
   background: #214dbd;
 }
 .our-team .team-card:hover .name {
   color: #ffffff;
 }
-.our-team .team-card p {
-  word-break: break-all;
+.our-team .team-card .cfa {
+  float: right;
+  color: #fff;
+  font-size: 20px;
 }
 .our-team .team-card .top {
   border-top: 6px solid #214dbd;
@@ -488,13 +492,20 @@ body {
   color: #377de1;
 }
 .industry-banner {
-  padding: 230px 0 20px 0;
+  padding: 230px 0;
   background: #111320;
   font-size: 24px;
   font-weight: 300;
   color: #dbdbdb;
   line-height: 36px;
   letter-spacing: 1px;
+}
+.industry-banner img {
+  display: block;
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  position: relative;
 }
 .industry-banner .stacked-cards {
   position: relative;
@@ -547,7 +558,6 @@ body {
   margin-top: 17px;
   font-size: 28px;
   font-weight: 400;
-  color: #ffffff;
   line-height: 28px;
   letter-spacing: -1px;
 }
@@ -581,7 +591,6 @@ body {
 }
 .global-location {
   background: #111320;
-  color: #fff;
 }
 .global-location .global-title {
   font-size: 45px;
@@ -638,7 +647,6 @@ body {
   float: right;
   font-size: 16px;
   font-weight: 400;
-  color: #fff;
   line-height: 28px;
   letter-spacing: 0px;
 }
@@ -646,16 +654,8 @@ body {
   float: left;
   margin-right: 73px;
 }
-.contact .contact-right .contact-user a {
-  display: block;
-  color: #fff;
-}
 .contact .contact-right .contact-serve {
   float: right;
-}
-.contact .contact-right .contact-serve a {
-  display: block;
-  color: #fff;
 }
 .contact .contact-right .title {
   margin: 64px 0 31px 0;
