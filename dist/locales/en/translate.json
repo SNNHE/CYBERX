@@ -10,12 +10,12 @@
 	"main":{
 			"Essentail":"Connect",
 			"Platfrom":"Assets<span class='cursor animation'></span>",
-			"textPrint":"Founded in 2016, CyberX is the leading prime broker in crypto space offering services in trading execution, market making, financing, and treasury management "
+			"textPrint":"Founded in 2016, CyberX is the leading prime broker in crypto space offering services in trading execution、 market making、financing and treasury management。 "
 	},
 	"banner":{
 			"Trading":"Trading",
 			"Execution":"Execution",
-			"oneA":"· Integrating liquidity from all major exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms ",
+			"oneA":"· Integrating liquidity from all major   exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms",
 			"oneB":"· In-house developed trading terminal with top-level security and trading algos (eg. TWAP/VWAP) for our client only",
 			"Market":"Market",
 			"Making":"Making",
@@ -24,8 +24,8 @@
 			"OTC":"OTC",
 			"threeA":"· Instant execution for large block trades in our OTC platform with the most market competitive spread backed by our proprietary liquidity ",
 			"threeB":"· 24/7 seemless quotation for major cryptocurrencies with client supports and settlement in time",
-			"financing":"Financing",
-			"fourA":"·  Offering one stop funding solutions including collatorized loan, shorting, and margin trade for you to optimize the capital efficiency and enhance the scale of your trading strategy across multiple exchanges",
+			"Financing":"Financing",
+			"fourA":"· Offering one stop funding solutions including collatorized loan, shorting, and margin trade for you to optimize the capital efficiency and enhance the scale of your trading strategy across multiple exchanges",
 			"fourB":"· Lending at the best rates of the market in all major coins with large loan supply, flexible duration and fixed rate"
 	},
 	"technology":{
@@ -46,7 +46,7 @@
 			"Profile":"Profile",
 			"info":"Our team consists of veterans from Wall Street banks Goldman Sachs, UBS, Merrill Lynch, top tier funds Citadel, AQR, Blackrock, GSA and Tech leaders Google, Baidu ,Thompson Reuters. The founder of CyberX also previously co-founded the first cryptocurrency wallet company in China, Bihang.com in 2013, which was acquired by OKCoin (now known as OKEx).",
 			"Aname":"Hao Wang",
-			"Amiddle":"<p>10 Year+</p>  <p>Crypto/Blockchain/Quant</p>",
+			"Amiddle":"<p>10 Year+</p>  <p>Crypto/Blockchain/Quant Trading</p>",
 			"Abottom":" <p>Bihang.com </p><p>Co-founder</p> <p>Goldman Sachs, Tokyo, FICC</p><p>Quant</p><p>University of Tokyo </p><p> Mathematic</p>",
 			"Bname":"CH Tang<span class='cfa'>CFA</span>",
 			"Bmiddle":" <p>10 Year+ Quant Trading</p>",
@@ -55,7 +55,7 @@
 			"Cmiddle":"<p>10 Year+ Algo Trading/Quant Trading</p >",
 			"Cbottom":" <p> Merrill Lynch </p ><p>  Head of Quantitative Strategies/Global Markets ED</p ><p>AQR Capital </p ><p>  Quant Analyst</p ><p> Columbia University</p ><p> Financial Engineering</p ><p> Tsinghua University  </p ><p> A.I &Pattern Recognitions</p >",
 			"Dname":"Yue Wei <span class='cfa'>CFA</span>",
-			"Dmiddle":"10 Year+ QuantTrading</p >",
+			"Dmiddle":"10 Year+ Quant Trading</p >",
 			"Dbottom":" <p> China based Quant fund  </p ><p>General Manager</p ><p>Large Mutual Fund   </p ><p>  Head of Quant Trading</p ><p>Citadel </p ><p>  Quant Analyst</p ><p> University of Wisconsin</p ><p>  PhD,Statistic</p ><p> Peking University </p ><p> Mathematic</p >",
 			"Ename":"Zack Fan",
 			"Emiddle":"<p>10 Year+</p> <p>Structure Product/Institutional Sales</p >",

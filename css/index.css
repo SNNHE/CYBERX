@@ -254,7 +254,6 @@ body a {
   box-sizing: border-box;
   font-size: 16px;
   font-weight: 200;
-  line-height: 24px;
   letter-spacing: 0px;
   opacity: 0;
   -webkit-transition: opacity 0.3s 0.3s;
@@ -266,7 +265,6 @@ body a {
   margin-bottom: 90px;
   font-size: 45px;
   font-weight: 400;
-  line-height: 45px;
   letter-spacing: -1px;
 }
 .banner .slide .slide-sub-info p:nth-child(1) {
