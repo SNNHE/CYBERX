@@ -385,6 +385,7 @@
     function removeActive(navTitleList){
       let last = $('#last');
       navTitleList.removeClass('active');
+      console.log('===', last);
       last.addClass('active');
     }
 
