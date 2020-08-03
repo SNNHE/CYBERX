@@ -192,7 +192,7 @@ body a {
   padding-left: 180px;
 }
 .banner .slide-one .slide-img {
-  flex: 1 1 65%;
+  flex: 1 1 45%;
   background: url(../images/banner1.png) no-repeat center center;
   background-size: cover;
 }
@@ -376,6 +376,7 @@ body a {
 }
 .technology .card-sub-info {
   padding: 0 50px 60px;
+  line-height: 25px;
   text-align: left;
 }
 .technology .card-img {
@@ -462,7 +463,7 @@ body a {
 .our-team .team-card .cfa {
   float: right;
   color: #fff;
-  font-size: 20px;
+  font-size: 16px;
 }
 .our-team .team-card .middle {
   height: 72px;
