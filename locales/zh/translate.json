@@ -8,13 +8,14 @@
 	},
 	"logo":"company LOGO",
 	"main":{
-			"Essentail":"资产",
-			"Platfrom":"链接<span class='cursor animation'></span>",
+			"Essentail":"链接",
+			"Platfrom":"资产<span class='cursor animation'></span>",
 			"textPrint":"成立于2016年，CyberX是一家在加密领域中的主经纪商，提供交易执行、做市、金融和资金管理等。"
 	},
 	"banner":{
 			"Trading":"交易",
 			"Execution":"执行",
+			"oneA":"整合全部主流交易所的流动性，以及通过利用我们最佳的智能路由和交易算法来提供市场上最佳的执行策略 ",
 			"oneB":" 为我们的交易用户提供自主研发的交易终端，其具备顶级的安全性和交易算法（比如TWAP/VWAP）",
 			"Market":"做市",
 			"Making":"市场",
@@ -32,12 +33,12 @@
 			"DrivenText":"CyberX是一家技术驱动型公司，我们的服务和产品充分利用了区块链技术、数学模型、深度学习、金融工程和数据挖掘等领域最新的进展来驱动。",
 			"Artificial":"人工",
 			"Intelligence":"智能",
-			"Ainfo":"<p>    深度学习-市场微观结构分析，预测价格走势 </p>  <p>   自然语言处理-市场和社会情绪监测的数据挖掘</p>   <p> 机器学习-标记白名单筛选代币  </p>",
+			"Ainfo":"<ul><li> 深度学习-市场微观结构分析，预测价格走势 </li>  <li>   自然语言处理-市场和社会情绪监测的数据挖掘</li>   <li> 机器学习-标记白名单筛选代币  </li></ul>",
 			"Blockchain":"区块链",
-			"Binfo":"<p>    实时链上划转分析 </p>  <p>   挖矿成本分析</p>   <p> 代币生态系统分析  </p>",
+			"Binfo":"<ul><li>    实时链上划转分析 </li>  <li>   挖矿成本分析</li>   <li> 代币生态系统分析  </li></ul>",
 			"Financial":"金融",
 			"Engineering":"工程",
-			"Cinfo":"<p>    同行业领先的低延迟交易引擎</p>  <p>   量化策略池</p>   <p> 大量交易算法支持的选择  </p>   <p> 数个亚洲交易策略奖项的获得者  </p>  <p> 衍生品定价/风险建模  </p>  "
+			"Cinfo":"<ul><li>    同行业领先的低延迟交易引擎</li>  <li>   量化策略池</li>   <li> 大量交易算法支持的选择  </li>   <li> 数个亚洲交易策略奖项的获得者  </li>  <li> 衍生品定价/风险建模  </li></ul>  "
 	},
 	"ourteam":{
 			"learn":"Learn More",
@@ -77,7 +78,7 @@
 			"date":"2020.20.20"
 	},
 	"global":{
-			"title":"全球据点",
+			"title":"办公地点",
 			"location":"<p><span>| 旧金山</span><span>   |  北京  |</span>      <span>香港   |</span></p>"
 	},
 	"contact":{

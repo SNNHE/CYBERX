@@ -267,7 +267,10 @@ body a {
   font-weight: 400;
   letter-spacing: -1px;
 }
-.banner .slide .slide-sub-info p:nth-child(1) {
+.banner .slide .slide-sub-info ul {
+  list-style: outside;
+}
+.banner .slide .slide-sub-info li:nth-child(1) {
   margin-bottom: 15px;
 }
 .banner .slide .slide-img {
@@ -378,6 +381,9 @@ body a {
   padding: 0 50px 60px;
   line-height: 25px;
   text-align: left;
+}
+.technology .card-sub-info ul {
+  list-style: outside;
 }
 .technology .card-img {
   padding: 68px 0 55px 0;

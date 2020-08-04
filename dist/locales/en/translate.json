@@ -10,41 +10,41 @@
 	"main":{
 			"Essentail":"Connect",
 			"Platfrom":"Assets<span class='cursor animation'></span>",
-			"textPrint":"Founded in 2016, CyberX is the leading prime broker in crypto space offering services in trading execution、 market making、financing and treasury management。 "
+			"textPrint":"Founded in 2016, CyberX is the leading prime broker in crypto space offering services in trading execution, market making, financing and treasury management "
 	},
 	"banner":{
 			"Trading":"Trading",
 			"Execution":"Execution",
-			"oneA":" Integrating liquidity from all major   exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms",
-			"oneB":" In-house developed trading terminal with top-level security and trading algos (eg. TWAP/VWAP) for our client only",
+			"oneA":"Integrating liquidity from all major   exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms",
+			"oneB":"In-house developed trading terminal with top-level security and trading algos (eg. TWAP/VWAP) for our client only",
 			"Market":"Market",
 			"Making":"Making",
-			"twoA":" Bespoke market making solutions in spot and derivative for crypto exchanges, wallets, and payment applications",
-			"twoB":" Providing liquidity on all levels, smoothing the market impact from trades in any size, and narrowing bid-ask spread to ensure an unparalled trading experience for traders. ",
+			"twoA":"Bespoke market making solutions in spot and derivative for crypto exchanges, wallets, and payment applications",
+			"twoB":"Providing liquidity on all levels, smoothing the market impact from trades in any size, and narrowing bid-ask spread to ensure an unparalled trading experience for traders ",
 			"OTC":"OTC",
-			"threeA":" Instant execution for large block trades in our OTC platform with the most market competitive spread backed by our proprietary liquidity ",
-			"threeB":" 24/7 seemless quotation for major cryptocurrencies with client supports and settlement in time",
+			"threeA":"Instant execution for large block trades in our OTC platform with the most market competitive spread backed by our proprietary liquidity ",
+			"threeB":"24/7 seemless quotation for major cryptocurrencies with client supports and settlement in time",
 			"Financing":"Financing",
-			"fourA":" Offering one stop funding solutions including collatorized loan, shorting, and margin trade for you to optimize the capital efficiency and enhance the scale of your trading strategy across multiple exchanges",
-			"fourB":" Lending at the best rates of the market in all major coins with large loan supply, flexible duration and fixed rate"
+			"fourA":"Offering one stop funding solutions including collatorized loan, shorting, and margin trade for you to optimize the capital efficiency and enhance the scale of your trading strategy across multiple exchanges",
+			"fourB":"Lending at the best rates of the market in all major coins with large loan supply, flexible duration and fixed rate"
 	},
 	"technology":{
 			"Driven":"Technology Driven",
-			"DrivenText":"CyberX is a technology driven company. Our services and products are driven by utilizing latest advancements in blockchain, mathematical modeling, deep learning, financial engineering, and data mining.",
+			"DrivenText":"CyberX is a technology driven company. Our services and products are driven by utilizing latest advancements in blockchain, mathematical modeling, deep learning, financial engineering, and data mining",
 			"Artificial":"Artificial",
 			"Intelligence":"Intelligence",
-			"Ainfo":"<p>    Deep Learning - Market’s  micro-structure analysis to predict price direction </p>  <p>   Natural Language Processing - Data mining for market and social sentiment monitoring</p>   <p> Machine Learning - Token white list screening  </p>",
+			"Ainfo":"<ul><li>Deep Learning - Market’s  micro-structure analysis to predict price direction </li>  <li>  Natural Language Processing - Data mining for market and social sentiment monitoring</li>   <li> Machine Learning - Token white list screening  </li></ul>",
 			"Blockchain": "Blockchain",
-			"Binfo":  " <p>  Real-time On-Chain transaction analysis </p>  <p> Mining Cost Analysis</p>  <p> TokenEcosystem Analysis</p>",
+			"Binfo":  " <ul><li>Real-time On-Chain transaction analysis </li>  <li> Mining Cost Analysis</li>  <li> TokenEcosystem Analysis</li></ul>",
 			"Financial": "Financial",
 			"Engineering": "Engineering",
-			"Cinfo":"<p> Industry leading low latency trade engine</p>  <p>  Quantitative strategy pool</p>  <p>  Large selection of trading Algosupport  </p><p>  Winner of many Asia Algotrading awards  </p>  <p>  Derivatives pricing / Risk modeling </p>"
+			"Cinfo":"<ul><li>Industry leading low latency trade engine</li>  <li> Quantitative strategy pool</li>  <li> Large selection of trading Algo support  </li><li>Winner of many Asia Algotrading awards  </li>  <li> Derivatives pricing / Risk modeling </li></ul>"
 	},
 	"ourteam":{
 			"learn": "Learn More",
 			"Team":"Team ",
 			"Profile":"Profile",
-			"info":"Our team consists of veterans from Wall Street banks Goldman Sachs, UBS, Merrill Lynch, top tier funds Citadel, AQR, Blackrock, GSA and Tech leaders Google, Baidu ,Thompson Reuters. The founder of CyberX also previously co-founded the first cryptocurrency wallet company in China, Bihang.com in 2013, which was acquired by OKCoin (now known as OKEx).",
+			"info":"Our team consists of veterans from Wall Street banks Goldman Sachs, UBS, Merrill Lynch, top tier funds Citadel, AQR, Blackrock, GSA and Tech leaders Google, Baidu, Thompson Reuters. The founder of CyberX also previously co-founded the first cryptocurrency wallet company in China, Bihang.com in 2013, which was acquired by OKCoin (now known as OKEx).",
 			"Aname":"Hao Wang",
 			"Amiddle":"<p>10 Year+</p>  <p>Crypto/Blockchain/Quant Trading</p>",
 			"Abottom":" <p>Bihang.com </p><p>Co-founder</p> <p>Goldman Sachs, Tokyo, FICC</p><p>Quant</p><p>University of Tokyo </p><p> Mathematic</p>",
