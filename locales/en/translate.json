@@ -35,7 +35,7 @@
 			"Intelligence":"Intelligence",
 			"Ainfo":"<ul><li>Deep Learning - Market’s  micro-structure analysis to predict price direction </li>  <li>  Natural Language Processing - Data mining for market and social sentiment monitoring</li>   <li> Machine Learning - Token white list screening  </li></ul>",
 			"Blockchain": "Blockchain",
-			"Binfo":  " <ul><li>Real-time On-Chain transaction analysis </li>  <li> Mining Cost Analysis</li>  <li> TokenEcosystem Analysis</li></ul>",
+			"Binfo":  " <ul><li style='padding-top: 23px;'>Real-time On-Chain transaction analysis </li>  <li> Mining Cost Analysis</li>  <li> TokenEcosystem Analysis</li></ul>",
 			"Financial": "Financial",
 			"Engineering": "Engineering",
 			"Cinfo":"<ul><li>Industry leading low latency trade engine</li>  <li> Quantitative strategy pool</li>  <li> Large selection of trading Algo support  </li><li>Winner of many Asia Algotrading awards  </li>  <li> Derivatives pricing / Risk modeling </li></ul>"
