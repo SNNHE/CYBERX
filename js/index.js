@@ -1,4 +1,4 @@
-// import '../css/index.css';
+import '../css/index.css';
   (function () {
     let _bind = function (fn, arg) {
       // console.log(fn, 'fn');
