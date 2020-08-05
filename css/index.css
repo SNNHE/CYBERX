@@ -268,6 +268,7 @@ body a {
   letter-spacing: -1px;
 }
 .banner .slide .slide-sub-info ul {
+  margin-left: 20px;
   list-style: outside;
 }
 .banner .slide .slide-sub-info li:nth-child(1) {
@@ -416,10 +417,10 @@ body a {
   -moz-display: flex;
   -ms-display: flex;
   display: flex;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 276px auto 0;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 .our-team .team-introduce {
   display: flex;
