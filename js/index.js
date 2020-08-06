@@ -491,7 +491,7 @@
       let light = new THREE.DirectionalLight(0xFFFFFF, 3);
       light.position.set(1500, 2500, 0);
       scene.add(light);
-      let texture = new THREE.TextureLoader().load("images/earthloop.png");
+      let texture = new THREE.TextureLoader().load("n_images/earthloop.png");
       let material = new THREE.MeshLambertMaterial({
         map: texture,
         side: THREE.DoubleSide,
@@ -507,7 +507,7 @@
 
       system.add(planet);
 
-      let textureW = new THREE.TextureLoader().load("images/outerloop.png");
+      let textureW = new THREE.TextureLoader().load("n_images/outerloop.png");
       let materialW = new THREE.MeshLambertMaterial({
         map: textureW,
         side: THREE.DoubleSide,
