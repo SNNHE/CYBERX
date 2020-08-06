@@ -1,10 +1,10 @@
 {
 	"nav":{
-			"Services":"Services",
-			"Team":"Team",
+			"Services":"服务",
+			"Team":"团队",
 			"Onboard":"Onboard",
-			"Contact":"Contact",
-			"OTC":"OTC"
+			"Contact":"联系我们",
+			"OTC":"场外交易"
 	},
 	"logo":"company LOGO",
 	"main":{
