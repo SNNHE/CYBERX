@@ -1,4 +1,4 @@
-import '../css/index.css';
+// import '../css/index.css';
   (function () {
     let _bind = function (fn, arg) {
       // console.log(fn, 'fn');
@@ -210,7 +210,7 @@ import '../css/index.css';
       let target = $('#textPrint');
       let lan = getCookie("language") || "en";
       let type = lan === 'en' ? 'words' : 'chars';
-      console.log(type, lan, '-==')
+      // console.log(type, lan, '-==')
       let split = new SplitText(target, { type });
       let tl = new TimelineMax();
       tl.staggerFrom(
@@ -368,9 +368,10 @@ import '../css/index.css';
           winScrollT = $(window).scrollTop();
         let offsetTop = itemOffTop - navHeight;
         let offsetBottom = itemOffTop + itemHeight - navHeight;
+           console.log(winScrollT, winH, docH)
         if(winScrollT + winH + 50 >= docH){ 
           // console.log(winScrollT, winH, docH)
-          // console.log('说明滚动到底部了')
+          console.log('说明滚动到底部了')
           removeActive(navTitleList);
           return;
         }
@@ -565,7 +566,7 @@ import '../css/index.css';
          let langType = getCookie("language") || "en";
          let $language = $('.nav .language');
         lang(langType);
-        console.log(langType);
+        // console.log(langType);
         langType === 'en' ? $language.find('.text').text('English'): $language.find('.text').text('简体中文');
         loadEarth();
         checkLanguage();

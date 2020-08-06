@@ -13,7 +13,7 @@ module.exports = {
   mode: 'production',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/[name].mins.js',
+    filename: 'n_js/[name].mins.js',
   },
   mode: 'production',
   module: {
@@ -37,8 +37,8 @@ module.exports = {
             options: {
               limit:10*1024,
               name: '[name].[hash:7].[ext]',
-              outputPath: 'images',
-              publicPath: '../images',
+              outputPath: 'n_images',
+              publicPath: '../n_images',
             }
           },
           {
@@ -109,7 +109,7 @@ module.exports = {
       defaultAttribute: 'defer'
     }),
     new MiniCssExtractPlugin({
-      filename:'./css/[name].css',
+      filename:'./n_css/[name].css',
     })
   ]
 }
