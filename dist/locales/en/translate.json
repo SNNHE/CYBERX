@@ -36,7 +36,7 @@
 			"Binfo":  " <ul><li style='padding-top: 23px;'>Real-time On-Chain transaction analysis </li>  <li> Mining Cost Analysis</li>  <li> TokenEcosystem Analysis</li></ul>",
 			"Financial": "Financial",
 			"Engineering": "Engineering",
-			"Cinfo":"<ul><li>Industry leading low latency trade engine</li>  <li>Providing massive trading algorithm backed options </li><li>Winner of many Asia Algotrading awards  </li>  <li> Derivatives pricing / Risk modeling </li><li> Quantitative strategy pool</li>  </ul>"
+			"Cinfo":"<ul><li>Industry leading low latency trade engine</li>  <li>Providing massive trading algorithm backed options </li><li>Winner of many Asia Algotrading awards  </li>  <li> Derivatives pricing / Risk modeling </li> </ul>"
 	},
 	"ourteam":{
 			"learn": "Learn More",

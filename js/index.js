@@ -411,7 +411,16 @@ import '../css/index.css';
         loop: true,
         autoplayDisableOnInteraction: false,
         // effect: 'fade',
-      })
+      });
+      console.log( swiper, ' swiper.el')
+      //鼠标覆盖停止自动切换
+      swiper.container[0].onmouseover=function(){
+        swiper.stopAutoplay();
+      }
+      //鼠标移出开始自动切换
+      swiper.container[0].onmouseout=function(){
+        swiper.startAutoplay();
+      }
     }
     function load3DSwiper() {
       new Swiper('#industryBanner .swiper-container', {
