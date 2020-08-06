@@ -207,15 +207,14 @@ body a {
   background-position: center center;
   transform: translate(-200px, 0);
 }
+.banner .slide-three {
+  background: url(../images/banner3.png) no-repeat;
+  background-size: contain;
+  background-position: right;
+}
 .banner .slide-three .slide-text {
   flex: 1 1 45%;
   padding-left: 180px;
-}
-.banner .slide-three .slide-img {
-  flex: 1 1 55%;
-  background: url(../images/banner3.png) no-repeat;
-  background-size: cover;
-  background-position: center center;
 }
 .banner .slide-four .slide-text {
   flex: 1 1 50%;
