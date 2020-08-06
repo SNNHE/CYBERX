@@ -10,14 +10,12 @@
 	"main":{
 			"Essentail":"链接",
 			"Platfrom":"资产<span class='cursor animation'></span>",
-			"textPrint":"成立于2016年，CyberX是一家在加密领域中的主经纪商，提供 交易执行、流动性管理、融资借贷和托管等服务"
+			"textPrint":"成立于2016年，CyberX是一家在加密领域中的主经纪商，提供交易执行、流动性管理、融资借贷和托管等服务"
 	},
 	"banner":{
-			"Trading":"交易",
-			"Execution":"执行",
+			"Trading":"交易执行",
 			"oneA":"拥有大部分主流交易所最佳交易费率。通过整合流动性以及通过利用我们最佳的智能路由和交易算法来提供市场上最佳的执行策略",
 			"oneB":" 为我们的交易用户提供自主研发的交易终端，其具备顶级的安全性和交易算法（比如TWAP/VWAP）",
-			"Market":"做市",
 			"Making":"流动性管理",
 			"twoA":"为加密货币交易所，钱包和支付端产品的现货、衍生品、结构化产品定制流动性解决方案",
 			"twoB":" 提供各个层面的流动性，缓和任何规模的交易对市场波动的影响，以及缩小买卖价差，确保交易者得到前所未有的交易体验",
@@ -82,9 +80,9 @@
 			"location":"<p><span>| 旧金山</span><span>   |  北京  |</span>      <span>香港   |</span></p>"
 	},
 	"contact":{
-			"title":"Contact_",
+			"title":"联系我们_",
 			"business":" <p>Email: business@cyberx.com</p><p> Weibo:CyberX行业观察</p> <p>Twitter: CyberX_Official</p>",
-			"user":"用户协议",
+			"user":"服务协议",
 			"userAgree":"<a href='https://cyberxhelp.zendesk.com/hc/zh-cn/articles/360051353614-Terms-of-Use' target='_blank'>用户协议</a> <a href='https://cyberxhelp.zendesk.com/hc/zh-cn/articles/360051353734-Privacy-Policy' target='_blank'> 隐私政策</a>",
 			"serve":"服务支持",
 			"help":"<a href='https://cyberxhelp.zendesk.com/'>帮助中心</a><a href='https://cyberxhelp.zendesk.com/hc/en-us/requests/new'>提交工单</a>"

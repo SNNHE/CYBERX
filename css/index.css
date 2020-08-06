@@ -281,6 +281,10 @@ body a {
   -ms-transition: opacity 0.3s 0.3s;
   transition: opacity 0.3s 0.3s;
 }
+.banner .swiper-slide-duplicate-active .slide-text.show,
+.banner .swiper-slide-duplicate-active .slide-img.show {
+  opacity: 1;
+}
 .banner .swiper-slide-active .slide-text.show,
 .banner .swiper-slide-active .slide-img.show {
   opacity: 1;

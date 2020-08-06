@@ -13,12 +13,10 @@
 			"textPrint":"Founded in 2016, CyberX is the leading prime broker in crypto space offering services in trading execution, market making, financing and treasury management "
 	},
 	"banner":{
-			"Trading":"Trading",
-			"Execution":"Execution",
-			"oneA":"Integrating liquidity from all major   exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms",
+			"Trading":"Trading Execution",
+			"oneA":"Integrating liquidity from all major exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms",
 			"oneB":"In-house developed trading terminal with top-level security and trading algos (eg. TWAP/VWAP) for our client only",
-			"Market":"Market",
-			"Making":"Making",
+			"Making":"Market Making",
 			"twoA":"Bespoke market making solutions in spot and derivative for crypto exchanges, wallets, and payment applications",
 			"twoB":"Providing liquidity on all levels, smoothing the market impact from trades in any size, and narrowing bid-ask spread to ensure an unparalled trading experience for traders ",
 			"OTC":"OTC",
@@ -82,11 +80,11 @@
 		"location": "<p><span>|  San Francisco</span><span>   |  Beijing  |</span>      <span>Hongkong   |</span></p>"
 	},
 	"contact": {
-		"title": "Contact_",
+		"title": "Contact Us_",
 		"business": " <p>Email: business@cyberx.com</p><p> Weibo: CyberX</p> <p>Twitter: CyberX_Official</p>",
-		"user": "Terms of Use",
-		"userAgree": "<a href='https://cyberxhelp.zendesk.com/hc/zh-cn/articles/360051353614-Terms-of-Use' target='_blank'>Terms of Use</a> <a href='https://cyberxhelp.zendesk.com/hc/zh-cn/articles/360051353734-Privacy-Policy' target='_blank'> Privacy policy</a>",
-		"serve": "Service support",
+		"user": "Terms of Service",
+		"userAgree": "<a href='https://cyberxhelp.zendesk.com/hc/zh-cn/articles/360051353614-Terms-of-Use' target='_blank'>Terms of use</a> <a href='https://cyberxhelp.zendesk.com/hc/zh-cn/articles/360051353734-Privacy-Policy' target='_blank'> Privacy policy</a>",
+		"serve": "Service Support",
 		"help": "<a href='https://cyberxhelp.zendesk.com/'>Help center</a><a href='https://cyberxhelp.zendesk.com/hc/en-us/requests/new'>Submit the repair order</a>"
 	},
 	"footer": {

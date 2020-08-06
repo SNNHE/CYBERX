@@ -1,4 +1,4 @@
-// import '../css/index.css';
+import '../css/index.css';
   (function () {
     let _bind = function (fn, arg) {
       // console.log(fn, 'fn');
@@ -406,8 +406,8 @@
       swiper = new Swiper('#banner .swiper-container', {
         pagination: '#banner .swiper-pagination',
         paginationClickable: true,
-        // speed:800,
-        // autoplay:4400,
+        speed:800,
+        autoplay:3400,
         loop: true,
         autoplayDisableOnInteraction: false,
         // effect: 'fade',
@@ -457,7 +457,7 @@
     function loadEarth() {
       let container = $("#_img");
       container.html('');
-      console.log('e.width()=====',container.width());
+      // console.log('e.width()=====',container.width());
       let width = container.width() - 50;
       let	height = 900;
       let aspect = width / height;
