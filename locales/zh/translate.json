@@ -23,7 +23,7 @@
 			"threeA":" 在我们的自有流动性支持下，可在场外交易平台上实时下单，提供市场上最具竞争力的价差",
 			"threeB":" 24X7小时为用户提供主要加密货币的最佳报价和结算方案",
 			"Financing":"融资借贷",
-			"fourA":" 为您提供一站式融资解决方案，包括抵押贷款、做空、保证金交易等，以优化资金效率，提升您横跨多个交易所的交易策略规模",
+			"fourA":" 为您提供一站式融资解决方案，包括抵押贷款、配资、保证金交易等。以优化资金效率，提升您跨多个交易所的交易策略规模",
 			"fourB":" 所有主要币种均按市场最佳利率出借，贷币供应量大，期限灵活以及利率固定"
 	},
 	"technology":{
@@ -42,7 +42,7 @@
 			"learn":"Learn More",
 			"Profile":"介绍 ",
 			"Team":"团队",
-			"info":"我们的团队成员分别来自于高盛、瑞银、美林等华尔街投行，顶级定价/⻛控模型团队MSCI, RiskMetrics, Barra以及科技巨头谷歌、百度、Thompson Reuters等CyberX的创始人在2013年联合创立了中国第一家加密货币钱包公司Bihang.com，后被 OKCoin(现在的OKEx)收购",
+			"info":"<p>我们的团队成员分别来自于高盛、瑞银、美林等华尔街投行，顶级定价/⻛控模型团队MSCI, RiskMetrics, Barra以及科技巨头谷歌、百度、Thompson Reuters等</p><p>CyberX的创始人在2013年联合创立了中国第一家加密货币钱包公司Bihang.com，后被 OKCoin(现在的OKEx)收购</p>",
 			"Aname":"Hao Wang",
 			"Amiddle":" <p>10 年 + </p> <p>数字货币 / 区块链 / 量化交易经验</p>",
 			"Abottom":" <p> 币行</p><p>联合创始人</p> <p>高盛，东京，固收量化</p><p>量化交易经验</p><p>东京大学</p><p> 数学专业</p>",
@@ -50,7 +50,7 @@
 			"Bmiddle":" <p>10 年 + 量化交易经验</p>",
 			"Bbottom":" <p> GSA Capital Partners </p><p>高级研究员</p><p>JT Capital Management</p> <p>高级研究员</p><p>贝莱德（BlackRock）集团 </p><p>经理</p>",
 			"Cname":"Kevin Xu<span class='cfa'>CFA</span>",
-			"Cmiddle":"10 年 + 算法交易 / 量化交易经验</p >",
+			"Cmiddle":"10 年 + </p ><p>算法交易 / 量化交易经验</p>",
 			"Cbottom":" <p> 美林证券</p ><p>量化策略负责人/全球市场执行董事</p ><p>AQR Capital (管理规模 1700 亿美元) </p ><p> 量化分析师</p ><p> 哥伦比亚大学</p ><p> 金融工程</p ><p> 清华大学</p ><p> A.I 自动化系</p >",
 			"Dname":"Dr. Yue <span class='cfa'>CFA</span>",
 			"Dmiddle":"10 年 + 量化交易经验</p >",
@@ -59,11 +59,11 @@
 			"Emiddle":"<p>10 年 + </p><p>金融产品设计 / 机构客户销售经验</p >",
 			"Ebottom":" <p> 瑞士银行,固收</p ><p>副董事</p ><p>花旗银行金融市场部</p ><p>副总监</p><p>加州大学伯克利分校</p ><p> 金融工程</p >",
 			"Fname":"Qin Liu",
-			"Fmiddle":"<p>10 年 + 机器学习 / 数据工程经验</p >",
+			"Fmiddle":"<p>10 年 + </p ><p>机器学习 / 数据工程经验</p>",
 			"Fbottom":" <p> 人工智能竞赛</p ><p>金牌获得者</p ><p>谷歌，硅谷总部</p ><p>人工智能专家</p><p>多伦多大学</p ><p>人工智能硕士</p ><p> 加拿大滑铁卢大学</p ><p> 计算机系</p >",
 			"Gname":"Harry Wong<span class='cfa'>CFA</span>",
-			"Gmiddle":"<p>5年+咨询行业经验</p >",
-			"Gbottom":" <p> Bitocean Global</p ><p>联合创始人&COO</p ><p>德勤</p ><p>企业财务顾问，高级经理</p > <p>不列颠哥伦比亚大学</p >"
+			"Gmiddle":"<p>5年+</p ><p>咨询行业经验</p>",
+			"Gbottom":" <p> Bitocean Global</p ><p>联合创始人&COO</p ><p>德勤</p ><p>企业财务顾问，高级经理</p > <p>不列颠哥伦比亚大学</p ><p>会计学</p>"
 	},
 	"industry":{
 			"title":"Industry Thoughts",

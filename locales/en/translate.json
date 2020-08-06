@@ -36,13 +36,13 @@
 			"Binfo":  " <ul><li style='padding-top: 23px;'>Real-time On-Chain transaction analysis </li>  <li> Mining Cost Analysis</li>  <li> TokenEcosystem Analysis</li></ul>",
 			"Financial": "Financial",
 			"Engineering": "Engineering",
-			"Cinfo":"<ul><li>Industry leading low latency trade engine</li>  <li>Providing massive trading algorithm backed options </li><li>Winner of many Asia Algotrading awards  </li>  <li> Derivatives pricing / Risk modeling </li>  </ul>"
+			"Cinfo":"<ul><li>Industry leading low latency trade engine</li>  <li>Providing massive trading algorithm backed options </li><li>Many Asia Trading Execution Strategy Rewards </li>  <li> Derivatives pricing / Risk modeling </li>  </ul>"
 	},
 	"ourteam":{
 			"learn": "Learn More",
 			"Team":"Team ",
 			"Profile":"Profile",
-			"info":"Our team consists of veterans from Wall Street banks Goldman Sachs, UBS, Merrill Lynch, top tier funds Citadel/Risk Control Modeling teams MSCI, RiskMetrics, Barra and tech leaders Google, Baidu, Thompson Reuters, and so on. The founder of CyberX also previously co-founded the first cryptocurrency wallet company in China, Bihang.com in 2013, which was acquired later by OKCoin (now known as OKEx)",
+			"info":"<p>Our team consists of veterans from Wall Street banks Goldman Sachs, UBS, Merrill Lynch, top tier funds Citadel/Risk Control Modeling teams MSCI, RiskMetrics, Barra and tech leaders Google, Baidu, Thompson Reuters, and so on. The founder of CyberX also previously co-founded the first cryptocurrency wallet company in China, Bihang.com in 2013, which was acquired later by OKCoin (now known as OKEx)</p>",
 			"Aname":"Hao Wang",
 			"Amiddle":"<p>10 Year+</p>  <p>Crypto/Blockchain/Quant Trading</p>",
 			"Abottom":" <p>Bihang.com </p><p>Co-founder</p> <p>Goldman Sachs, Tokyo, FICC</p><p>Quant</p><p>University of Tokyo </p><p> Mathematic</p>",
@@ -50,7 +50,7 @@
 			"Bmiddle":" <p>10 Year+ Quant Trading</p>",
 			"Bbottom":" <p> GSA Capital Partners</p><p>Sr.Research</p><p>JT Capital Management </p><p>Sr.Research</p> <p>BlackRock</p><p>Manager</p>",
 			"Cname":"Kevin Xu<span class='cfa'>CFA</span>",
-			"Cmiddle":"<p>10 Year+ Algo Trading/Quant Trading</p >",
+			"Cmiddle":"<p>10 Year+ </p ><p>Algo Trading/Quant Trading</p>",
 			"Cbottom":" <p> Merrill Lynch </p ><p>  Head of Quantitative Strategies/Global Markets ED</p ><p>AQR Capital </p ><p>  Quant Analyst</p ><p> Columbia University</p ><p> Financial Engineering</p ><p> Tsinghua University  </p ><p> A.I &Pattern Recognitions</p >",
 			"Dname":"Yue Wei <span class='cfa'>CFA</span>",
 			"Dmiddle":"10 Year+ Quant Trading</p >",
@@ -59,11 +59,11 @@
 			"Emiddle":"<p>10 Year+</p> <p>Structure Product/Institutional Sales</p >",
 			"Ebottom":" <p> UBS, FICC </p ><p>Associate Director</p ><p>Citibank, Capital Market </p ><p>Vice President</p><p>U.C.Berkeley </p ><p> Financial Engineering</p >",
 			"Fname":"Qin Liu",
-			"Fmiddle":"<p>10 Year+ Machine Learning/Big Data</p >",
-			"Fbottom":" <p>AI Contest</p ><p> Gold Medal</p ><p>Google, Mountain View </p ><p> A.I.Scientist</p><p>University of Toronto </p ><p>  Master, A.I.</p ><p> University of Waterloo</p ><p> Computer Science</p >",
+			"Fmiddle":"<p>10 Year+ </p ><p>Machine Learning/Big Data</p>",
+			"Fbottom":" <p>Kaggle competitions</p ><p>Gold Medals 2 Years</p ><p>Google, Mountain View </p ><p> A.I.Scientist</p><p>University of Toronto </p ><p>  Master, A.I.</p ><p> University of Waterloo</p ><p> Computer Science</p >",
 			"Gname":"Harry Wong <span class='cfa'>CFA</span>",
-			"Gmiddle":" <p>5 Year+ Advisory</p >",
-			"Gbottom":" <p>Bitocean Global,</p ><p> Co-founder&COO</p ><p>Deloitte</p ><p>Corporate Finance Advisor, Senior Associate</p > <p>University of British Columbia </p >"
+			"Gmiddle":" <p>5 Year+ </p ><p>Advisory</p>",
+			"Gbottom":" <p>Bitocean Global,</p ><p> Co-founder&COO</p ><p>Deloitte</p ><p>Corporate Finance Advisor, Senior Associate</p > <p>University of British Columbia </p ><p>Accounting</p>"
 	},
 	"industry": {
 		"title": "Industry Thoughts",
