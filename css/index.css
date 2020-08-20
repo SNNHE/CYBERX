@@ -461,9 +461,6 @@ body a {
   -ms-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
 }
-.our-team .team-card:nth-last-child(1):hover {
-  background: none;
-}
 .our-team .team-card:hover {
   background: #214dbd;
 }
