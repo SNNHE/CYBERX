@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="font-size: 59px;">
 
 <head>
 	<meta charset="UTF-8">
@@ -20,7 +20,7 @@
 	<script defer src="n_js/swiper-3.4.2.jquery.min.js"></script>
 	<script defer src="n_js/i18next.min.1.11.2.js"></script>
 	<script defer src="n_js/three.min.js"></script>
-	<script>	~(function(){window.addEventListener('resize', computed, false);function computed() {var deviceW = document.documentElement.clientWidth;if (`${deviceW}`.indexOf('6') >= 0)  {document.documentElement.style.fontSize = 59 + 'px';	return	}if(deviceW > 640) return;document.documentElement.style.fontSize = deviceW / 640 * 100 + 'px';	}computed();})();	</script>
+	<script>	~(function(){window.addEventListener('resize', computed, false);window.isPhone = function isPhone() {	let userAgent = navigator.userAgent;	let mobile = ['Android', 'iPhone', 'SymbianOS', 'iPad', 'Windows Phone', 'iPod'];	let flag = false;	for (let v = 0; v < mobile.length; v++) {	const cur = mobile[v];if (userAgent.indexOf(cur) > 0) {flag = true;break;}}return flag;};function computed() {var deviceW = document.documentElement.clientWidth;if (`${deviceW}`.indexOf('6') >= 0)  {document.documentElement.style.fontSize = 59 + 'px';	return	}if(deviceW > 640) return;document.documentElement.style.fontSize = deviceW / 640 * 100 + 'px';	}computed();})();	</script>
 </head>
 
 <body>

@@ -89,7 +89,6 @@ body a {
   -moz-display: flex;
   -ms-display: flex;
   display: flex;
-  flex: 1 1 50%;
 }
 .nav .language {
   cursor: pointer;
@@ -690,6 +689,32 @@ body a {
   letter-spacing: 0px;
 }
 @media screen and (max-width: 1200px) and (min-width: 940px) {
+  .nav {
+    height: 1rem;
+  }
+  .nav .nav-tab,
+  .nav .language {
+    display: none;
+  }
+  .nav .logo {
+    float: left;
+  }
+  .nav .nav-container {
+    display: block;
+    padding-top: 0.25rem;
+    padding-left: 0.67rem;
+  }
+  .nav .m-icon {
+    float: right;
+    padding-right: 0.84rem;
+  }
+  .nav .m-icon .iconfont {
+    display: block;
+    width: 0.4rem;
+    margin-bottom: 0.1rem;
+    height: 0.05rem;
+    background: #fff;
+  }
   .main-block {
     padding: 0 0.6rem;
     height: 10rem;
@@ -765,6 +790,32 @@ body a {
   }
 }
 @media screen and (max-width: 940px) and (min-width: 810px) {
+  .nav {
+    height: 1rem;
+  }
+  .nav .nav-tab,
+  .nav .language {
+    display: none;
+  }
+  .nav .logo {
+    float: left;
+  }
+  .nav .nav-container {
+    display: block;
+    padding-top: 0.25rem;
+    padding-left: 0.67rem;
+  }
+  .nav .m-icon {
+    float: right;
+    padding-right: 0.84rem;
+  }
+  .nav .m-icon .iconfont {
+    display: block;
+    width: 0.4rem;
+    margin-bottom: 0.1rem;
+    height: 0.05rem;
+    background: #fff;
+  }
   .main-block {
     padding: 0 0.6rem;
     height: 10rem;
@@ -856,6 +907,32 @@ body a {
 @media screen and (max-width: 810px) and (min-width: 640px) {
   html {
     font-size: 59px;
+  }
+  .nav {
+    height: 1rem;
+  }
+  .nav .nav-tab,
+  .nav .language {
+    display: none;
+  }
+  .nav .logo {
+    float: left;
+  }
+  .nav .nav-container {
+    display: block;
+    padding-top: 0.25rem;
+    padding-left: 0.67rem;
+  }
+  .nav .m-icon {
+    float: right;
+    padding-right: 0.84rem;
+  }
+  .nav .m-icon .iconfont {
+    display: block;
+    width: 0.4rem;
+    margin-bottom: 0.1rem;
+    height: 0.05rem;
+    background: #fff;
   }
   .technology .technology-bg {
     background-position: left 0 top 0;

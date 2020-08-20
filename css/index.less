@@ -102,7 +102,7 @@ body {
 
 .nav .nav-tab {
   .pre(display, flex);
-  flex: 1 1 50%;
+  // flex: 1 1 50%;
 }
 
 .nav .language {
@@ -850,6 +850,32 @@ body {
 }
 
 @media screen and (max-width: 1200px) and (min-width: 940px) {
+  .nav {
+  height: 1rem;
+  .nav-tab, .language {
+  display: none;
+  }
+  .logo {
+    float: left;
+  }
+  .nav-container {
+    display: block;
+    padding-top: .25rem;
+    padding-left: 0.67rem;
+  }
+  .m-icon {
+    // flex: 1 1 .4rem;
+    float: right;
+    padding-right: .84rem;
+    .iconfont {
+      display: block;
+      width: .4rem;
+      margin-bottom: .1rem;
+      height: 0.05rem;
+      background: #fff;
+    }
+  }
+}
   .main-block {
     padding: 0 .6rem;
     height: 10rem;
@@ -939,6 +965,33 @@ body {
 }
 
 @media screen and (max-width: 940px) and (min-width: 810px) {
+
+  .nav {
+    height: 1rem;
+    .nav-tab, .language {
+    display: none;
+    }
+    .logo {
+      float: left;
+    }
+    .nav-container {
+      display: block;
+      padding-top: .25rem;
+      padding-left: 0.67rem;
+    }
+    .m-icon {
+      // flex: 1 1 .4rem;
+      float: right;
+      padding-right: .84rem;
+      .iconfont {
+        display: block;
+        width: .4rem;
+        margin-bottom: .1rem;
+        height: 0.05rem;
+        background: #fff;
+      }
+    }
+  }
 .main-block {
   padding: 0 .6rem;
   height: 10rem;
@@ -1057,6 +1110,32 @@ body {
 @media screen and (max-width: 810px) and (min-width: 640px) {
   html {
     font-size: 59px;
+  }
+  .nav {
+    height: 1rem;
+    .nav-tab, .language {
+    display: none;
+    }
+    .logo {
+      float: left;
+    }
+    .nav-container {
+      display: block;
+      padding-top: .25rem;
+      padding-left: 0.67rem;
+    }
+    .m-icon {
+      // flex: 1 1 .4rem;
+      float: right;
+      padding-right: .84rem;
+      .iconfont {
+        display: block;
+        width: .4rem;
+        margin-bottom: .1rem;
+        height: 0.05rem;
+        background: #fff;
+      }
+    }
   }
   .technology {
     .technology-bg {

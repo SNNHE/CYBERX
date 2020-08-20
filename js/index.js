@@ -1,4 +1,4 @@
-// import '../css/index.css';
+import '../css/index.css';
   (function () {
     let _bind = function (fn, arg) {
       // console.log(fn, 'fn');
@@ -156,21 +156,22 @@
   }).call(window)
 
   let pageRender = (function () {
-    var winH = $(window).height();
-    var docH =  $(document).height();
-    function isPhone() {
-      let userAgent = navigator.userAgent;
-      let mobile = ['Android', 'iPhone', 'SymbianOS', 'iPad', 'Windows Phone', 'iPod'];
-      let flag = false;
-      for (let v = 0; v < mobile.length; v++) {
-        const cur = mobile[v];
-        if (userAgent.indexOf(cur) > 0) {
-          flag = true;
-          break;
-        }   
-      }
-      return flag;
-    }
+    let winH = $(window).height();
+    let camera = null;
+    // var docH =  $(document).height();
+    // function isPhone() {
+    //   let userAgent = navigator.userAgent;
+    //   let mobile = ['Android', 'iPhone', 'SymbianOS', 'iPad', 'Windows Phone', 'iPod'];
+    //   let flag = false;
+    //   for (let v = 0; v < mobile.length; v++) {
+    //     const cur = mobile[v];
+    //     if (userAgent.indexOf(cur) > 0) {
+    //       flag = true;
+    //       break;
+    //     }   
+    //   }
+    //   return flag;
+    // }
 
     function saveCookie(cookieName, cookieValue, cookieDates) {
       var d = new Date();
@@ -271,7 +272,7 @@
         let target = item.split(' ');
         // console.log(object)
         let offset = $(`.${target[1]}`).hasClass('scroll-delay') ? 450 : 100;
-        offset = $(`.${target[1]}`).hasClass('scroll-delay') && isPhone() ? 250 : 80;
+        offset = $(`.${target[1]}`).hasClass('scroll-delay') && window.isPhone() ? 250 : 80;
         let tl = TweenMax.fromTo($(`.${target[1]}`), 1, {
           opacity: 0
         }, {
@@ -281,7 +282,7 @@
         new ScrollMagic.Scene({
           triggerElement: `#${target[0]}`,
           offset,
-          triggerHook: isPhone() ? .65 : .75,
+          triggerHook: window.isPhone() ? .65 : .75,
           duration: 200,
         }).setPin($(`.${target[1]}`)).setTween(tl).addTo(controller);
       })
@@ -342,7 +343,7 @@
     function showSwiper() {
       let slide = $('.slide'),
         win = $(window),
-        slideOffsetTop = isPhone() ? slide.offset().top + 140  : slide.offset().top + 240,
+        slideOffsetTop = window.isPhone() ? slide.offset().top + 140  : slide.offset().top + 240,
         winScrollTop = win.scrollTop(),
         winH = win.height();
       // console.log('slideOffsetTop', slideOffsetTop - winScrollTop, winH)
@@ -356,16 +357,15 @@
     }
 
     function navMonitor() {
-      // width = container.clientWidth;
-      // height = container.clientHeight;
-      if (isPhone()) return;
+      if (window.isPhone()) return;
       let navHeight = 20 + 109,
       navTitleList = $('.nav-tab .title');
       navTitleList.each(function () {
         let id = $(this).attr('data-id');
         let itemOffTop = $(id).offset().top,
           itemHeight = $(id).height(),
-          winScrollT = $(window).scrollTop();
+          winScrollT = $(window).scrollTop(),
+          docH = $(document).height();
         let offsetTop = itemOffTop - navHeight;
         let offsetBottom = itemOffTop + itemHeight - navHeight;
            console.log(winScrollT, winH, docH)
@@ -386,7 +386,7 @@
     function removeActive(navTitleList){
       let last = $('#last');
       navTitleList.removeClass('active');
-      console.log('===', last);
+      // console.log('===', last);
       last.addClass('active');
     }
 
@@ -466,9 +466,9 @@
 
     function loadEarth() {
       let container = $("#_img");
-      container.html('');
-      // console.log('e.width()=====',container.width());
-      let width = container.width() - 50;
+      // container.html('');
+      // let width = container.width() - 50;
+      let width = (document.documentElement.clientWidth - 180 - 101) * 0.6 - 50;
       let	height = 900;
       let aspect = width / height;
       let renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -477,11 +477,15 @@
 
       let scene = new THREE.Scene();
 
-      let camera = new THREE.PerspectiveCamera(50, aspect, 0.1, 1000);
-      camera.position.z = 500;
+      camera = new THREE.PerspectiveCamera(50, aspect, 0.1, 1000);
+      if(width < 640) {
+        camera.position.z = 600; // 越大球越小
+      } else {
+        camera.position.z = 500; // 越大球越小
+      }
       camera.up.y = 7;
       camera.lookAt(new THREE.Vector3(0, 0, 0));
-
+  
       var system = new THREE.Group(); // planetary system
 
       scene.add(
@@ -546,6 +550,24 @@
       }
       render();
     }
+
+    function earthSize() {
+      let container = $("#_img").find('canvas');
+      // // camera.position.set(x,y,z)
+      // let width = container.width();
+      // console.log(width, 'width------------')
+      console.log('container',container);
+      let width = (document.documentElement.clientWidth - 180 - 101) * 0.6 - 50;
+      container.width(width);
+      camera = new THREE.PerspectiveCamera(50, width / 900, 0.1, 1000);
+      if(width < 640) {
+        camera.position.z = 600; // 越大球越小
+      } else {
+        camera.position.z = 500; // 越大球越小
+      }
+      camera.updateProjectionMatrix();
+    }
+
     function navMinBar () {
       let $mIcon = $(".m-icon"),
           $nav = $('.nav'),
@@ -560,6 +582,7 @@
         }
       })
     }
+
 
     return {
       init() {
@@ -579,6 +602,7 @@
         // new StackedCards({selector: '.stacked-ul'});
         window.addEventListener('resize', throttle(navMinBar, 800), false);
         window.addEventListener('resize', throttle(showSwiper, 800), false);
+        window.addEventListener('resize', throttle(earthSize, 500), false);
       
       }
     }
