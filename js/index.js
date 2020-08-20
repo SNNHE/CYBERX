@@ -1,4 +1,4 @@
-import '../css/index.css';
+// import '../css/index.css';
   (function () {
     let _bind = function (fn, arg) {
       // console.log(fn, 'fn');
@@ -368,10 +368,10 @@ import '../css/index.css';
           docH = $(document).height();
         let offsetTop = itemOffTop - navHeight;
         let offsetBottom = itemOffTop + itemHeight - navHeight;
-           console.log(winScrollT, winH, docH)
+          //  console.log(winScrollT, winH, docH)
         if(winScrollT + winH + 50 >= docH){ 
           // console.log(winScrollT, winH, docH)
-          console.log('说明滚动到底部了')
+          // console.log('说明滚动到底部了')
           removeActive(navTitleList);
           return;
         }
@@ -413,7 +413,7 @@ import '../css/index.css';
         autoplayDisableOnInteraction: false,
         // effect: 'fade',
       });
-      console.log( swiper, ' swiper.el')
+      // console.log( swiper, ' swiper.el')
       //鼠标覆盖停止自动切换
       swiper.container[0].onmouseover=function(){
         swiper.stopAutoplay();
@@ -556,7 +556,7 @@ import '../css/index.css';
       // // camera.position.set(x,y,z)
       // let width = container.width();
       // console.log(width, 'width------------')
-      console.log('container',container);
+      // console.log('container',container);
       let width = (document.documentElement.clientWidth - 180 - 101) * 0.6 - 50;
       container.width(width);
       camera = new THREE.PerspectiveCamera(50, width / 900, 0.1, 1000);
