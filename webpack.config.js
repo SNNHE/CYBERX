@@ -5,6 +5,8 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin'); 
+const CopyPlugin = require('copy-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -13,7 +15,7 @@ module.exports = {
   mode: 'production',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'n_js/[name].mins.js',
+    filename: 'js/[name].mins.js'
   },
   mode: 'production',
   module: {
@@ -28,7 +30,7 @@ module.exports = {
           // 'style-loader',
           'css-loader',
         ],
-      }, 
+      },
       {
         test: /\.(png)/i,
         use: [
@@ -37,8 +39,8 @@ module.exports = {
             options: {
               limit:10*1024,
               name: '[name].[hash:7].[ext]',
-              outputPath: 'n_images',
-              publicPath: '../n_images',
+              outputPath: 'images',
+              publicPath: '../images',
             }
           },
           {
@@ -52,7 +54,7 @@ module.exports = {
                 enabled: true,
               },
               pngquant: {
-                quality: [0.3, 0.5],
+                quality: [0.2, 0.8],
                 // speed: 4
               },
               gifsicle: {
@@ -100,6 +102,18 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(),
+    new CopyPlugin({
+      patterns: [
+        { from: './locales/en', to: path.resolve(__dirname, 'dist/locales/en') },
+        { from: './locales/zh', to: path.resolve(__dirname, 'dist/locales/zh') },
+        { from: './images/earthloop.png', to: path.resolve(__dirname, 'dist/images') },
+        { from: './images/outerloop.png', to: path.resolve(__dirname, 'dist/images') },
+        { from: './images/partner.png', to: path.resolve(__dirname, 'dist/images') },
+        { from: './css/swiper-3.4.2.min.css', to: path.resolve(__dirname, 'dist/css') },
+        { from: './js', to: path.resolve(__dirname, 'dist/js') },
+      ],
+    }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './public/index.html',
@@ -109,7 +123,7 @@ module.exports = {
       defaultAttribute: 'defer'
     }),
     new MiniCssExtractPlugin({
-      filename:'./n_css/[name].css',
+      filename:'./css/[name].css',
     })
   ]
 }

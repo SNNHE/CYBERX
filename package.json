@@ -17,21 +17,22 @@
   },
   "homepage": "https://github.com/SNNHE/CYBERX#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.0.3",
     "css-loader": "^3.6.0",
+    "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
+    "image-webpack-loader": "^6.0.0",
+    "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "path": "^0.12.7",
+    "script-ext-html-webpack-plugin": "^2.1.4",
     "style-loader": "^1.2.1",
     "terser-webpack-plugin": "^3.0.6",
+    "url-loader": "^4.1.0",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12",
-    "file-loader": "^6.0.0",
-    "image-webpack-loader": "^6.0.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "script-ext-html-webpack-plugin": "^2.1.4",
-    "url-loader": "^4.1.0"
+    "webpack-cli": "^3.3.12"
   },
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }
