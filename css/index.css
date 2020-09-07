@@ -999,7 +999,7 @@ body a {
   }
   .main-block .main-left-text .text-print {
     font-size: 0.32rem;
-    line-height: 0.32rem;
+    line-height: 0.45rem;
     margin-bottom: 1rem;
   }
   .banner .slide {
@@ -1008,6 +1008,7 @@ body a {
   .banner .slide .slide-text {
     position: absolute;
     top: 2rem;
+    z-index: 22;
     padding: 0 0.4rem;
     font-size: 0.32rem;
   }

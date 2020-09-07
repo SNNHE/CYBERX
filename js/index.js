@@ -158,6 +158,7 @@ import '../css/index.css';
   let pageRender = (function () {
     let winH = $(window).height();
     let camera = null;
+    let navHeight = 20 + 109;
     // var docH =  $(document).height();
     // function isPhone() {
     //   let userAgent = navigator.userAgent;
@@ -358,14 +359,13 @@ import '../css/index.css';
 
     function navMonitor() {
       if (window.isPhone()) return;
-      let navHeight = 20 + 109,
-      navTitleList = $('.nav-tab .title');
+      let navTitleList = $('.nav-tab .title'),
+          winScrollT = $(window).scrollTop(),
+          docH = $(document).height();
       navTitleList.each(function () {
         let id = $(this).attr('data-id');
         let itemOffTop = $(id).offset().top,
-          itemHeight = $(id).height(),
-          winScrollT = $(window).scrollTop(),
-          docH = $(document).height();
+            itemHeight = $(id).height();
         let offsetTop = itemOffTop - navHeight;
         let offsetBottom = itemOffTop + itemHeight - navHeight;
           //  console.log(winScrollT, winH, docH)
@@ -570,8 +570,7 @@ import '../css/index.css';
 
     function navMinBar () {
       let $mIcon = $(".m-icon"),
-          $nav = $('.nav'),
-          $navTab = $('.nav-tab');
+          $nav = $('.nav');
       if (!$mIcon) return;
       $mIcon.on('click', function() {
         let has = $nav.hasClass('openNav');
