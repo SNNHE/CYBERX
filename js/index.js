@@ -600,9 +600,27 @@ import '../css/index.css';
       })
     }
 
+    function installSW() {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/ServiceWorker/sw.js', { scope: '/ServiceWorker/' }).then(function(reg) {
+          if (reg.installing) {
+            console.log('Service worker installing');
+          } else if (res.waiting) {
+            console.log('Service worker installed');
+          } else if(res.active){
+            console.log('Service worker active');
+          }
+        })
+        .catch(function(error) {
+          console.log('Registration failed with' + error);
+        });
+      }
+    }
+
 
     return {
       init() {
+          installSW();
          let langType = getCookie("language") || "en";
          let $language = $('.nav .language');
         lang(langType);
@@ -620,8 +638,7 @@ import '../css/index.css';
         // new StackedCards({selector: '.stacked-ul'});
         window.addEventListener('resize', throttle(navMinBar, 800), false);
         window.addEventListener('resize', throttle(showSwiper, 800), false);
-        window.addEventListener('resize', throttle(earthSize, 500), false);
-      
+        window.addEventListener('resize', throttle(earthSize, 500), false);    
       }
     }
   })()

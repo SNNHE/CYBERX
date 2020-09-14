@@ -112,11 +112,13 @@ module.exports = {
         { from: './images/partner.png', to: path.resolve(__dirname, 'dist/images') },
         { from: './css/swiper-3.4.2.min.css', to: path.resolve(__dirname, 'dist/css') },
         { from: './js', to: path.resolve(__dirname, 'dist/js') },
+        { from: './ServiceWorker', to: path.resolve(__dirname, 'dist/ServiceWorker') },
       ],
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './public/index.html',
+      favicon: './images/favicon.ico',
       hash: true, // 为了避免缓存，可以在产出的资源后面添加hash值
     }),
     new ScriptExtHtmlWebpackPlugin({
