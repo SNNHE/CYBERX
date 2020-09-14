@@ -605,9 +605,9 @@ import '../css/index.css';
         navigator.serviceWorker.register('/ServiceWorker/sw.js', { scope: '/ServiceWorker/' }).then(function(reg) {
           if (reg.installing) {
             console.log('Service worker installing');
-          } else if (res.waiting) {
+          } else if (reg.waiting) {
             console.log('Service worker installed');
-          } else if(res.active){
+          } else if(reg.active){
             console.log('Service worker active');
           }
         })

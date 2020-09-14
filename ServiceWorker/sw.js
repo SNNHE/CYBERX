@@ -7,11 +7,11 @@ const urlsCache = [
   '/js/three.min.js',
   '/js/i18next.min.1.11.2.js',
 ]
-console.log('caches', caches);
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(CACHE_NAME).then(function(cache) {
-      return caches.addAll(urlsCache)
+      console.log('caches', cache);
+      return cache.addAll(urlsCache)
     })
   )
 })
