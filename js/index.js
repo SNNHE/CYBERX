@@ -1,4 +1,4 @@
-import '../css/index.css';
+// import '../css/index.css';
   (function () {
     let _bind = function (fn, arg) {
       // console.log(fn, 'fn');
@@ -602,7 +602,7 @@ import '../css/index.css';
 
     function installSW() {
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./ServiceWorker/sw.js').then(function(reg) {
+        navigator.serviceWorker.register('/ServiceWorker/sw.js', { scope: '/cyberx'}).then(function(reg) {
           if (reg.installing) {
             console.log('Service worker installing');
           } else if (reg.waiting) {
