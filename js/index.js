@@ -602,7 +602,7 @@
 
     function installSW() {
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/CYBERX/ServiceWorker/sw.js', { scope: '/CYBERX/'}).then(function(reg) {
+        navigator.serviceWorker.register('/CYBERX/ServiceWorker/sw.js', { scope: '/CYBERX/ServiceWorker/'}).then(function(reg) {
           if (reg.installing) {
             console.log('Service worker installing');
           } else if (reg.waiting) {
