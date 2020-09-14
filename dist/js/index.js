@@ -602,7 +602,7 @@ import '../css/index.css';
 
     function installSW() {
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/ServiceWorker/sw.js', { scope: '/dist/' }).then(function(reg) {
+        navigator.serviceWorker.register('./ServiceWorker/sw.js', { scope: '/dist/' }).then(function(reg) {
           if (reg.installing) {
             console.log('Service worker installing');
           } else if (reg.waiting) {
