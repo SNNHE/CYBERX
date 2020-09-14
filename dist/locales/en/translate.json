@@ -14,16 +14,16 @@
 	},
 	"banner":{
 			"Trading":"Trading Execution",
-			"oneA":"Offering the lowest trading fees for most of the major Crypto Exchanges. Ingegrating liquidity from all major exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms",
+			"oneA":"Offering the lowest trading fees for most of the major Crypto Exchanges. integrating liquidity from all major exchanges and offering the best market execution by utilizing our advanced smart routing and trading algorithms",
 			"oneB":"In-house developed trading terminal with top-level security and trading algos (eg. TWAP/VWAP) for our client only",
-			"Making":"Market Making",
-			"twoA":"Providing flexible solutions for market making in spot, derivative, and structrual products for crypto exchanges, wallets, and payment applications",
-			"twoB":"Providing liquidity on all levels, smoothing the market impact from trades in any size, and narrowing bid-ask spread to ensure an unparalled trading experience for traders ",
+			"Making":"Liquidty",
+			"twoA":"Providing solutions for liquidity in spot, derivative, and structural products for crypto exchanges, wallets, and payment applications",
+			"twoB":"Providing liquidity on all levels, smoothing the market impact from trades in any size, and narrowing bid-ask spread to ensure an unparalleled trading experience for traders ",
 			"OTC":"OTC",
 			"threeA":"Real-time trading on our OTC platform with the most market competitive spread backed by our proprietary liquidity ",
-			"threeB":"24/7 seemless quotation for major cryptocurrencies with client supports and settlement in time",
-			"Financing":"Financing loans",
-			"fourA":"Offering one stop financing solutions including collatorized loans, funding, and margin trade for you to optimize the capital efficiency and enhance the scale of your trading strategy across multiple exchanges",
+			"threeB":"24/7 seamless quotation for major cryptocurrencies with client supports and settlement in time",
+			"Financing":"Financing",
+			"fourA":"Offering one stop financing solutions including collateralized loans, funding, and margin trade for you to optimize the capital efficiency and enhance the scale of your trading strategy across multiple exchanges",
 			"fourB":"Lending at the best rates of the market in all major coins with large loan supply, flexible duration and fixed rate"
 	},
 	"technology":{
@@ -42,13 +42,13 @@
 			"learn": "Learn More",
 			"Team":"Team ",
 			"Profile":"Profile",
-			"info":"<p>Our team consists of veterans from Wall Street banks Goldman Sachs, UBS, Merrill Lynch, top tier funds Citadel/Risk Control Modeling teams MSCI, RiskMetrics, Barra and tech leaders Google, Baidu, Thompson Reuters, and so on. The founder of CyberX also previously co-founded the first cryptocurrency wallet company in China, Bihang.com in 2013, which was acquired later by OKCoin (now known as OKEx)</p>",
+			"info":"<p>Our team consists of veterans from Wall Street banks (Goldman Sachs, UBS, Merrill Lynch), risk control modeling teams (MSCI, RiskMetrics, Barra), tech leaders (Google, Baidu, Thompson Reuters) and so on. The founder of CyberX also previously co-founded the first cryptocurrency wallet company in China, Bihang.com in 2013, which was acquired later by OKCoin (now known as OKEx)</p>",
 			"Aname":"Hao Wang",
 			"Amiddle":"<p>10 Year+</p>  <p>Crypto/Blockchain/Quant Trading</p>",
 			"Abottom":" <p>Bihang.com </p><p>Co-founder</p> <p>Goldman Sachs, Tokyo, FICC</p><p>Quant</p><p>University of Tokyo </p><p> Mathematic</p>",
 			"Bname":"Shuang Li",
 			"Bmiddle":" <p>10 Year+</p>  <p> Product Management/Structured Products</p>",
-			"Bbottom":"<p>MSCI Barra/Riskmetrics</p><p>Greater China Regional Product Manager, Excutive Director</p><p>HSBC Global Markets</p><p>FI Structuring, Associate </p> <p>Oriental Patron Investment</p><p>Private Equity, Associate  </p><p>Oxford University</p><p>MSc. in Applied Mathematics  </p><p>London School of Economics </p><p>BSc. in Economics</p>",
+			"Bbottom":"<p>MSCI Barra/Riskmetrics</p><p>Greater China Regional Product Manager, Executive Director</p><p>HSBC Global Markets</p><p>FI Structuring, Associate </p> <p>Oriental Patron Investment</p><p>Private Equity, Associate  </p><p>Oxford University</p><p>MSc. in Applied Mathematics  </p><p>London School of Economics </p><p>BSc. in Economics</p>",
 			"Cname":"Kevin Xu<span class='cfa'>CFA</span>",
 			"Cmiddle":"<p>10 Year+ </p ><p>Algo Trading/Quant Trading</p>",
 			"Cbottom":" <p> Merrill Lynch </p ><p>  Head of Quantitative Strategies/Global Markets ED</p ><p>AQR Capital </p ><p>  Quant Analyst</p ><p> Columbia University</p ><p> Financial Engineering</p ><p> Tsinghua University  </p ><p> A.I &Pattern Recognitions</p >",
@@ -63,7 +63,7 @@
 			"Fbottom":" <p>Kaggle competitions</p ><p>Gold Medals</p ><p>Google, Mountain View </p ><p> A.I.Scientist</p><p>University of Toronto </p ><p>  Master, A.I.</p ><p> University of Waterloo</p ><p> Computer Science</p >",
 			"Gname":"Harry Wong <span class='cfa'>CFA</span>",
 			"Gmiddle":"<p>10 Year+ </p ><p>Advisory/Internet/Crypto</p>",
-			"Gbottom":" <p>Bitocean Global,</p ><p> Co-founder&COO</p ><p>Deloitte</p ><p>Corporate Finance Advisor, Senior Associate</p > <p>University of British Columbia </p ><p>Accounting</p>"
+			"Gbottom":" <p>BitOcean Global,</p ><p> Co-founder&COO</p ><p>Deloitte</p ><p>Corporate Finance Advisor, Senior Associate</p > <p>University of British Columbia </p ><p>Accounting</p>"
 	},
 	"industry": {
 		"title": "Industry Thoughts",

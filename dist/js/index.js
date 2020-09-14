@@ -582,6 +582,24 @@ import '../css/index.css';
       })
     }
 
+    function clickNav() {
+      let $navTab = $('.nav-tab');
+      $navTab.on('click', function(e) {
+        const targetAttr = $(e.target).attr('data-id');
+        if (targetAttr) {
+          $navTab.find('a').each(function() {
+            $(this).removeClass('active');
+          })
+          $(e.target).addClass('active')
+          const eleTop = $(targetAttr).offset().top;
+          $('html,body').animate({
+            scrollTop: eleTop,
+          }, 400);
+          // console.log( $(targetAttr))
+        }
+      })
+    }
+
 
     return {
       init() {
@@ -596,6 +614,7 @@ import '../css/index.css';
         loadScrollMagic();
         loadSwiper();
         navMinBar();
+        clickNav();
         load3DSwiper();
         // console.log(window.StackedCards)
         // new StackedCards({selector: '.stacked-ul'});
