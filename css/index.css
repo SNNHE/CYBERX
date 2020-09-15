@@ -67,7 +67,7 @@ body a {
   z-index: 999;
   width: 100%;
   height: 70px;
-  background: red;
+  background: green;
 }
 .nav::before {
   display: none;
