@@ -1,6 +1,6 @@
 const CACHE_NAME = 'my-sw-v1'
 const urlsCache = [
-  // '/CYBERX/',
+  '/CYBERX/',
   '/CYBERX/css/swiper-3.4.2.min.css',
   '/CYBERX/js/jquery.min.js',
   '/CYBERX/js/TweenMax.min.js',
