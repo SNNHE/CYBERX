@@ -194,16 +194,32 @@
       return cookieValue;
     }
 
-    function throttle(fn, wait) {
-      var timer = null;
+    function throttle(fn, wait = 500) {
+      var timer = null,
+          previous = 0;
       return function (...args) {
-        var _this = this;
-        if (!timer) {
-          timer = setTimeout(function () {
-            fn.call(_this, ...args);
+        var _this = this,
+            now = new Date(),
+            remaining = wait - (now - previous);
+        if (remaining <= 0) {
+          clearTimeout(timer);
+          timer = null;
+          previous = now;
+          fn.call(_this, ...args);
+        } else {
+          timer = setTimeout(function() {
+            clearTimeout(timer);
             timer = null;
-          }, wait);
+            previous = new Date();
+            fun.call(_this, ...args);
+          }, remaining)
         }
+        // if (!timer) {
+        //   timer = setTimeout(function () {
+        //     fn.call(_this, ...args);
+        //     timer = null;
+        //   }, wait);
+        // }
       }
     }
 
@@ -272,18 +288,18 @@
       ['technology tec-introduce', 'technology tec-info-text', 'ourTeam team-introduce', 'industryBanner industry-title', 'industryBanner stacked-img','industryBanner industry-slides',  'globalLocation global-title', 'globalLocation earth-location'].forEach(function (item, i) {
         let target = item.split(' ');
         // console.log(object)
-        let offset = $(`.${target[1]}`).hasClass('scroll-delay') ? 450 : 100;
-        offset = $(`.${target[1]}`).hasClass('scroll-delay') && window.isPhone() ? 250 : 80;
+        let offset = $(`.${target[1]}`).hasClass('scroll-delay') ? 200 : 100;
+            offset = $(`.${target[1]}`).hasClass('scroll-delay') && window.isPhone() ? 250 : offset;
         let tl = TweenMax.fromTo($(`.${target[1]}`), 1, {
           opacity: 0
         }, {
           opacity: 1,
           ease: Bounce.easeInOut
-        }, .2);
+        });
         new ScrollMagic.Scene({
           triggerElement: `#${target[0]}`,
           offset,
-          triggerHook: window.isPhone() ? .65 : .75,
+          triggerHook: window.isPhone() ? .65 : .85,
           duration: 200,
         }).setPin($(`.${target[1]}`)).setTween(tl).addTo(controller);
       })
@@ -338,24 +354,36 @@
       // })
 
 
-
-    }
-
-    function showSwiper() {
-      let slide = $('.slide'),
-        win = $(window),
-        slideOffsetTop = window.isPhone() ? slide.offset().top + 140  : slide.offset().top + 240,
-        winScrollTop = win.scrollTop(),
-        winH = win.height();
-      // console.log('slideOffsetTop', slideOffsetTop - winScrollTop, winH)
-      if (slideOffsetTop - winScrollTop < winH) {
-        slide.find('.slide-text').addClass('show');
-        slide.find('.slide-img').addClass('show');
-      } else {
-        slide.find('.slide-text').removeClass('show');
-        slide.find('.slide-img').removeClass('show');
+      var slide = document.getElementsByClassName("slide");
+      for (let i = 0; i < slide.length; i++) {
+        let $slide = $(slide[i]);
+        new ScrollMagic.Scene({
+          // triggerElement: slide[i],
+          offset: 5,
+          triggerHook: 0.85,
+        })
+          // .setPin($(slide[i]))
+          .setClassToggle([$slide.find('.slide-text')[0], $slide.find('.slide-img')[0]], "show") // add class toggle
+          .addTo(controller)
       }
+
     }
+
+    // function showSwiper() {
+    //   let slide = $('.slide'),
+    //       win = $(window),
+    //       slideOffsetTop = window.isPhone() ? slide.offset().top + 140  : slide.offset().top + 240,
+    //       winScrollTop = win.scrollTop(),
+    //       winH = win.height();
+    //   // console.log('slideOffsetTop', slideOffsetTop - winScrollTop, winH)
+    //   if (slideOffsetTop - winScrollTop < winH) {
+    //     slide.find('.slide-text').addClass('show');
+    //     slide.find('.slide-img').addClass('show');
+    //   } else {
+    //     slide.find('.slide-text').removeClass('show');
+    //     slide.find('.slide-img').removeClass('show');
+    //   }
+    // } 
 
     function navMonitor() {
       if (window.isPhone()) return;
@@ -370,8 +398,6 @@
         let offsetBottom = itemOffTop + itemHeight - navHeight;
           //  console.log(winScrollT, winH, docH)
         if(winScrollT + winH + 50 >= docH){ 
-          // console.log(winScrollT, winH, docH)
-          // console.log('说明滚动到底部了')
           removeActive(navTitleList);
           return;
         }
@@ -386,19 +412,19 @@
     function removeActive(navTitleList){
       let last = $('#last');
       navTitleList.removeClass('active');
-      // console.log('===', last);
       last.addClass('active');
     }
 
-    function scrollEvent() {
-      showSwiper();
-      navMonitor()
-    }
+    // function scrollEvent() {
+    //   showSwiper();
+    //   navMonitor()
+    // }
 
     function scrollMonitor() {
-      scrollEvent()
+      // scrollEvent()
+      navMonitor()
       let win = $(window);
-      win.scroll(throttle(scrollEvent, 800));
+      win.scroll(throttle(navMonitor, 800));
       win.resize(throttle(navMonitor, 800));
     }
 
@@ -616,29 +642,29 @@
         });
       }
     }
+    function resizeFun() {
+      throttle(navMinBar, 800);
+      throttle(earthSize, 500)
+    }
 
 
     return {
       init() {
-          installSW();
-         let langType = getCookie("language") || "en";
-         let $language = $('.nav .language');
+        installSW();
+        let langType = getCookie("language") || "en", $language = $('.nav .language');
         lang(langType);
-        // console.log(langType);
         langType === 'en' ? $language.find('.text').text('English'): $language.find('.text').text('简体中文');
         loadEarth();
         checkLanguage();
+        loadSwiper();
         scrollMonitor();
         loadScrollMagic();
-        loadSwiper();
         navMinBar();
         clickNav();
         load3DSwiper();
         // console.log(window.StackedCards)
         // new StackedCards({selector: '.stacked-ul'});
-        window.addEventListener('resize', throttle(navMinBar, 800), false);
-        window.addEventListener('resize', throttle(showSwiper, 800), false);
-        window.addEventListener('resize', throttle(earthSize, 500), false);    
+        window.addEventListener('resize', resizeFun(), false);
       }
     }
   })()
