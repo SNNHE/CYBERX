@@ -211,7 +211,7 @@
             clearTimeout(timer);
             timer = null;
             previous = new Date();
-            fun.call(_this, ...args);
+            fn.call(_this, ...args);
           }, remaining)
         }
         // if (!timer) {
@@ -262,7 +262,9 @@
 
     function loadScrollMagic() {
       let controller = new ScrollMagic.Controller();
-
+      let teamCard = document.getElementsByClassName("team-card");
+      let slide = document.getElementsByClassName("slide");
+      let $technologyCard = $('#technology .card');
       // let tl = new TimelineMax();
       // let sections = document.querySelectorAll('section');
       // [].slice.call(sections, 1).forEach((item, index) => {
@@ -284,13 +286,15 @@
       //   new ScrollMagic.Scene(scene).setTween(tl).addTo(controller);
       // })
 
-      //
-      ['technology tec-introduce', 'technology tec-info-text', 'ourTeam team-introduce', 'industryBanner industry-title', 'industryBanner stacked-img','industryBanner industry-slides',  'globalLocation global-title', 'globalLocation earth-location'].forEach(function (item, i) {
-        let target = item.split(' ');
-        // console.log(object)
-        let offset = $(`.${target[1]}`).hasClass('scroll-delay') ? 200 : 100;
-            offset = $(`.${target[1]}`).hasClass('scroll-delay') && window.isPhone() ? 250 : offset;
-        let tl = TweenMax.fromTo($(`.${target[1]}`), 1, {
+      
+      ['technology tec-introduce', 'technology tec-info-text', 'ourTeam team-introduce', 'ourTeam stacked-img', 'globalLocation global-title', 'globalLocation earth-location'].forEach(function (item) {
+        let target = item.split(' '),
+            $target = `.${target[1]}`,
+            hasClass = $($target).hasClass('scroll-delay');
+        let offset = hasClass ? 200 : 100;
+            offset = hasClass && window.isPhone() ? 250 : offset;
+            offset = $target === '.stacked-img' ? 1500 : offset;
+        let tl = TweenMax.fromTo($($target), 1, {
           opacity: 0
         }, {
           opacity: 1,
@@ -301,13 +305,14 @@
           offset,
           triggerHook: window.isPhone() ? .65 : .85,
           duration: 200,
-        }).setPin($(`.${target[1]}`)).setTween(tl).addTo(controller);
+        }).setPin($($target)).setTween(tl).addTo(controller);
       })
 
       //#technology .card
-      $('#technology .card').each(function (i, item) {
-        // console.log(item)
-        let triggerHook;
+      $technologyCard.each(function (i, item) {
+        // console.log(item)     
+        let triggerHook,
+            $item = $(item);
         if (i === 0) {
           triggerHook = .95
         } else if (i === 1) {
@@ -328,11 +333,10 @@
           offset: 550,
           triggerHook,
           duration: 200,
-        }).setPin($(item)).setTween(tl).addTo(controller);
+        }).setPin($item).setTween(tl).addTo(controller);
       })
 
       // team card
-      var teamCard = document.getElementsByClassName("team-card");
       for (var i = 0; i < teamCard.length; i++) {
         // console.log(teamCard, 'teamCard')
         new ScrollMagic.Scene({
@@ -354,16 +358,17 @@
       // })
 
 
-      var slide = document.getElementsByClassName("slide");
       for (let i = 0; i < slide.length; i++) {
-        let $slide = $(slide[i]);
+        let $slide = $(slide[i]),
+            $slideText = $slide.find('.slide-text'),
+            $slideImg = $slide.find('.slide-img');
         new ScrollMagic.Scene({
-          // triggerElement: slide[i],
-          offset: 5,
+          triggerElement: $slide[0],
+          offset: 100,
           triggerHook: 0.85,
         })
           // .setPin($(slide[i]))
-          .setClassToggle([$slide.find('.slide-text')[0], $slide.find('.slide-img')[0]], "show") // add class toggle
+          .setClassToggle([$slideText[0], $slideImg[0]], "show") // add class toggle
           .addTo(controller)
       }
 
@@ -401,7 +406,7 @@
           removeActive(navTitleList);
           return;
         }
-        $(this).removeClass('active')
+        $(this).removeClass('active');
         // console.log('offsetTop', offsetTop, winScrollT, 'winScrollT', offsetBottom, 'offsetBottom', winScrollT > offsetTop, winScrollT < offsetBottom);
         if (winScrollT > offsetTop && winScrollT < offsetBottom) {
           $(this).addClass('active');
@@ -439,7 +444,6 @@
         autoplayDisableOnInteraction: false,
         // effect: 'fade',
       });
-      // console.log( swiper, ' swiper.el')
       //鼠标覆盖停止自动切换
       swiper.container[0].onmouseover=function(){
         swiper.stopAutoplay();
@@ -449,25 +453,25 @@
         swiper.startAutoplay();
       }
     }
-    function load3DSwiper() {
-      new Swiper('#industryBanner .swiper-container', {
-        // watchSlidesProgress: true,
-        // slidesPerView: 'auto',
-        // centeredSlides: true,
-        // loopedSlides: 3,
-        loop: true,
-        autoplayDisableOnInteraction: false,
-        pagination: '#industryBanner .swiper-pagination',
-        paginationClickable: true,
-        //处理分页器bug
-        // onSlideChangeStart: function(swiper) {
-        // 	if (swiper.activeIndex == 4) {
-        // 		swiper.bullets.eq(9).addClass('swiper-pagination-bullet-active');
-        // 		console.log(swiper.bullets.length);
-        // 	}
-        // }
-      });
-    }
+    // function load3DSwiper() {
+    //   new Swiper('#industryBanner .swiper-container', {
+    //     // watchSlidesProgress: true,
+    //     // slidesPerView: 'auto',
+    //     // centeredSlides: true,
+    //     // loopedSlides: 3,
+    //     loop: true,
+    //     autoplayDisableOnInteraction: false,
+    //     pagination: '#industryBanner .swiper-pagination',
+    //     paginationClickable: true,
+    //     //处理分页器bug
+    //     // onSlideChangeStart: function(swiper) {
+    //     // 	if (swiper.activeIndex == 4) {
+    //     // 		swiper.bullets.eq(9).addClass('swiper-pagination-bullet-active');
+    //     // 		console.log(swiper.bullets.length);
+    //     // 	}
+    //     // }
+    //   });
+    // }
 
     function lang(language) {
       $.i18n.init({
@@ -581,8 +585,6 @@
       let container = $("#_img").find('canvas');
       // // camera.position.set(x,y,z)
       // let width = container.width();
-      // console.log(width, 'width------------')
-      // console.log('container',container);
       let width = (document.documentElement.clientWidth - 180 - 101) * 0.6 - 50;
       container.width(width);
       camera = new THREE.PerspectiveCamera(50, width / 900, 0.1, 1000);
@@ -613,10 +615,6 @@
       $navTab.on('click', function(e) {
         const targetAttr = $(e.target).attr('data-id');
         if (targetAttr) {
-          $navTab.find('a').each(function() {
-            $(this).removeClass('active');
-          })
-          $(e.target).addClass('active')
           const eleTop = $(targetAttr).offset().top;
           $('html,body').animate({
             scrollTop: eleTop,
@@ -650,18 +648,18 @@
 
     return {
       init() {
-        installSW();
         let langType = getCookie("language") || "en", $language = $('.nav .language');
-        lang(langType);
         langType === 'en' ? $language.find('.text').text('English'): $language.find('.text').text('简体中文');
+        installSW();
+        lang(langType);
         loadEarth();
         checkLanguage();
         loadSwiper();
-        scrollMonitor();
         loadScrollMagic();
         navMinBar();
+        scrollMonitor();
         clickNav();
-        load3DSwiper();
+        // load3DSwiper();
         // console.log(window.StackedCards)
         // new StackedCards({selector: '.stacked-ul'});
         window.addEventListener('resize', resizeFun(), false);
