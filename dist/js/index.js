@@ -194,16 +194,32 @@ import '../css/index.css';
       return cookieValue;
     }
 
-    function throttle(fn, wait) {
-      var timer = null;
+    function throttle(fn, wait = 500) {
+      var timer = null,
+          previous = 0;
       return function (...args) {
-        var _this = this;
-        if (!timer) {
-          timer = setTimeout(function () {
-            fn.call(_this, ...args);
+        var _this = this,
+            now = new Date(),
+            remaining = wait - (now - previous);
+        if (remaining <= 0) {
+          clearTimeout(timer);
+          timer = null;
+          previous = now;
+          fn.call(_this, ...args);
+        } else {
+          timer = setTimeout(function() {
+            clearTimeout(timer);
             timer = null;
-          }, wait);
+            previous = new Date();
+            fn.call(_this, ...args);
+          }, remaining)
         }
+        // if (!timer) {
+        //   timer = setTimeout(function () {
+        //     fn.call(_this, ...args);
+        //     timer = null;
+        //   }, wait);
+        // }
       }
     }
 
@@ -246,7 +262,10 @@ import '../css/index.css';
 
     function loadScrollMagic() {
       let controller = new ScrollMagic.Controller();
-
+      let teamCard = document.getElementsByClassName("team-card");
+      let slide = document.getElementsByClassName("slide");
+      let $technologyCard = $('#technology .card');
+      let domArr = ['technology tec-introduce', 'technology tec-info-text', 'ourTeam team-introduce', 'ourTeam stacked-img', 'globalLocation global-title', 'globalLocation earth-location'];
       // let tl = new TimelineMax();
       // let sections = document.querySelectorAll('section');
       // [].slice.call(sections, 1).forEach((item, index) => {
@@ -268,30 +287,33 @@ import '../css/index.css';
       //   new ScrollMagic.Scene(scene).setTween(tl).addTo(controller);
       // })
 
-      //
-      ['technology tec-introduce', 'technology tec-info-text', 'ourTeam team-introduce', 'industryBanner industry-title', 'industryBanner stacked-img','industryBanner industry-slides',  'globalLocation global-title', 'globalLocation earth-location'].forEach(function (item, i) {
-        let target = item.split(' ');
-        // console.log(object)
-        let offset = $(`.${target[1]}`).hasClass('scroll-delay') ? 450 : 100;
-        offset = $(`.${target[1]}`).hasClass('scroll-delay') && window.isPhone() ? 250 : 80;
-        let tl = TweenMax.fromTo($(`.${target[1]}`), 1, {
+      
+      domArr.forEach(function (item) {
+        let target = item.split(' '),
+            $target = `.${target[1]}`,
+            hasClass = $($target).hasClass('scroll-delay');
+        let offset = hasClass ? 200 : 100;
+            offset = hasClass && window.isPhone() ? 250 : offset;
+            offset = $target === '.stacked-img' ? 1500 : offset;
+        let tl = TweenMax.fromTo($($target), 1, {
           opacity: 0
         }, {
           opacity: 1,
           ease: Bounce.easeInOut
-        }, .2);
+        });
         new ScrollMagic.Scene({
           triggerElement: `#${target[0]}`,
           offset,
-          triggerHook: window.isPhone() ? .65 : .75,
+          triggerHook: window.isPhone() ? .65 : .85,
           duration: 200,
-        }).setPin($(`.${target[1]}`)).setTween(tl).addTo(controller);
+        }).setPin($($target)).setTween(tl).addTo(controller);
       })
 
       //#technology .card
-      $('#technology .card').each(function (i, item) {
-        // console.log(item)
-        let triggerHook;
+      $technologyCard.each(function (i, item) {
+        // console.log(item)     
+        let triggerHook,
+            $item = $(item);
         if (i === 0) {
           triggerHook = .95
         } else if (i === 1) {
@@ -312,11 +334,10 @@ import '../css/index.css';
           offset: 550,
           triggerHook,
           duration: 200,
-        }).setPin($(item)).setTween(tl).addTo(controller);
+        }).setPin($item).setTween(tl).addTo(controller);
       })
 
       // team card
-      var teamCard = document.getElementsByClassName("team-card");
       for (var i = 0; i < teamCard.length; i++) {
         // console.log(teamCard, 'teamCard')
         new ScrollMagic.Scene({
@@ -338,24 +359,37 @@ import '../css/index.css';
       // })
 
 
-
-    }
-
-    function showSwiper() {
-      let slide = $('.slide'),
-        win = $(window),
-        slideOffsetTop = window.isPhone() ? slide.offset().top + 140  : slide.offset().top + 240,
-        winScrollTop = win.scrollTop(),
-        winH = win.height();
-      // console.log('slideOffsetTop', slideOffsetTop - winScrollTop, winH)
-      if (slideOffsetTop - winScrollTop < winH) {
-        slide.find('.slide-text').addClass('show');
-        slide.find('.slide-img').addClass('show');
-      } else {
-        slide.find('.slide-text').removeClass('show');
-        slide.find('.slide-img').removeClass('show');
+      for (let i = 0; i < slide.length; i++) {
+        let $slide = $(slide[i]),
+            $slideText = $slide.find('.slide-text'),
+            $slideImg = $slide.find('.slide-img');
+        new ScrollMagic.Scene({
+          triggerElement: $slide[0],
+          offset: 100,
+          triggerHook: 0.85,
+        })
+          // .setPin($(slide[i]))
+          .setClassToggle([$slideText[0], $slideImg[0]], "show") // add class toggle
+          .addTo(controller)
       }
+
     }
+
+    // function showSwiper() {
+    //   let slide = $('.slide'),
+    //       win = $(window),
+    //       slideOffsetTop = window.isPhone() ? slide.offset().top + 140  : slide.offset().top + 240,
+    //       winScrollTop = win.scrollTop(),
+    //       winH = win.height();
+    //   // console.log('slideOffsetTop', slideOffsetTop - winScrollTop, winH)
+    //   if (slideOffsetTop - winScrollTop < winH) {
+    //     slide.find('.slide-text').addClass('show');
+    //     slide.find('.slide-img').addClass('show');
+    //   } else {
+    //     slide.find('.slide-text').removeClass('show');
+    //     slide.find('.slide-img').removeClass('show');
+    //   }
+    // } 
 
     function navMonitor() {
       if (window.isPhone()) return;
@@ -370,12 +404,10 @@ import '../css/index.css';
         let offsetBottom = itemOffTop + itemHeight - navHeight;
           //  console.log(winScrollT, winH, docH)
         if(winScrollT + winH + 50 >= docH){ 
-          // console.log(winScrollT, winH, docH)
-          // console.log('说明滚动到底部了')
           removeActive(navTitleList);
           return;
         }
-        $(this).removeClass('active')
+        $(this).removeClass('active');
         // console.log('offsetTop', offsetTop, winScrollT, 'winScrollT', offsetBottom, 'offsetBottom', winScrollT > offsetTop, winScrollT < offsetBottom);
         if (winScrollT > offsetTop && winScrollT < offsetBottom) {
           $(this).addClass('active');
@@ -386,19 +418,19 @@ import '../css/index.css';
     function removeActive(navTitleList){
       let last = $('#last');
       navTitleList.removeClass('active');
-      // console.log('===', last);
       last.addClass('active');
     }
 
-    function scrollEvent() {
-      showSwiper();
-      navMonitor()
-    }
+    // function scrollEvent() {
+    //   showSwiper();
+    //   navMonitor()
+    // }
 
     function scrollMonitor() {
-      scrollEvent()
+      // scrollEvent()
+      navMonitor()
       let win = $(window);
-      win.scroll(throttle(scrollEvent, 800));
+      win.scroll(throttle(navMonitor, 800));
       win.resize(throttle(navMonitor, 800));
     }
 
@@ -413,7 +445,6 @@ import '../css/index.css';
         autoplayDisableOnInteraction: false,
         // effect: 'fade',
       });
-      // console.log( swiper, ' swiper.el')
       //鼠标覆盖停止自动切换
       swiper.container[0].onmouseover=function(){
         swiper.stopAutoplay();
@@ -423,25 +454,25 @@ import '../css/index.css';
         swiper.startAutoplay();
       }
     }
-    function load3DSwiper() {
-      new Swiper('#industryBanner .swiper-container', {
-        // watchSlidesProgress: true,
-        // slidesPerView: 'auto',
-        // centeredSlides: true,
-        // loopedSlides: 3,
-        loop: true,
-        autoplayDisableOnInteraction: false,
-        pagination: '#industryBanner .swiper-pagination',
-        paginationClickable: true,
-        //处理分页器bug
-        // onSlideChangeStart: function(swiper) {
-        // 	if (swiper.activeIndex == 4) {
-        // 		swiper.bullets.eq(9).addClass('swiper-pagination-bullet-active');
-        // 		console.log(swiper.bullets.length);
-        // 	}
-        // }
-      });
-    }
+    // function load3DSwiper() {
+    //   new Swiper('#industryBanner .swiper-container', {
+    //     // watchSlidesProgress: true,
+    //     // slidesPerView: 'auto',
+    //     // centeredSlides: true,
+    //     // loopedSlides: 3,
+    //     loop: true,
+    //     autoplayDisableOnInteraction: false,
+    //     pagination: '#industryBanner .swiper-pagination',
+    //     paginationClickable: true,
+    //     //处理分页器bug
+    //     // onSlideChangeStart: function(swiper) {
+    //     // 	if (swiper.activeIndex == 4) {
+    //     // 		swiper.bullets.eq(9).addClass('swiper-pagination-bullet-active');
+    //     // 		console.log(swiper.bullets.length);
+    //     // 	}
+    //     // }
+    //   });
+    // }
 
     function lang(language) {
       $.i18n.init({
@@ -555,8 +586,6 @@ import '../css/index.css';
       let container = $("#_img").find('canvas');
       // // camera.position.set(x,y,z)
       // let width = container.width();
-      // console.log(width, 'width------------')
-      // console.log('container',container);
       let width = (document.documentElement.clientWidth - 180 - 101) * 0.6 - 50;
       container.width(width);
       camera = new THREE.PerspectiveCamera(50, width / 900, 0.1, 1000);
@@ -587,10 +616,6 @@ import '../css/index.css';
       $navTab.on('click', function(e) {
         const targetAttr = $(e.target).attr('data-id');
         if (targetAttr) {
-          $navTab.find('a').each(function() {
-            $(this).removeClass('active');
-          })
-          $(e.target).addClass('active')
           const eleTop = $(targetAttr).offset().top;
           $('html,body').animate({
             scrollTop: eleTop,
@@ -602,7 +627,7 @@ import '../css/index.css';
 
     function installSW() {
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./ServiceWorker/sw.js').then(function(reg) {
+        navigator.serviceWorker.register('/CYBERX/sw.js', { scope: '/CYBERX/'}).then(function(reg) {
           if (reg.installing) {
             console.log('Service worker installing');
           } else if (reg.waiting) {
@@ -616,29 +641,29 @@ import '../css/index.css';
         });
       }
     }
+    function resizeFun() {
+      throttle(navMinBar, 800);
+      throttle(earthSize, 500)
+    }
 
 
     return {
       init() {
-          installSW();
-         let langType = getCookie("language") || "en";
-         let $language = $('.nav .language');
-        lang(langType);
-        // console.log(langType);
+        let langType = getCookie("language") || "en", $language = $('.nav .language');
         langType === 'en' ? $language.find('.text').text('English'): $language.find('.text').text('简体中文');
+        installSW();
+        lang(langType);
         loadEarth();
         checkLanguage();
-        scrollMonitor();
-        loadScrollMagic();
         loadSwiper();
+        loadScrollMagic();
         navMinBar();
+        scrollMonitor();
         clickNav();
-        load3DSwiper();
+        // load3DSwiper();
         // console.log(window.StackedCards)
         // new StackedCards({selector: '.stacked-ul'});
-        window.addEventListener('resize', throttle(navMinBar, 800), false);
-        window.addEventListener('resize', throttle(showSwiper, 800), false);
-        window.addEventListener('resize', throttle(earthSize, 500), false);    
+        window.addEventListener('resize', resizeFun(), false);
       }
     }
   })()

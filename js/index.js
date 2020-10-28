@@ -1,4 +1,4 @@
-// import '../css/index.css';
+import '../css/index.css';
   (function () {
     let _bind = function (fn, arg) {
       // console.log(fn, 'fn');
@@ -265,6 +265,7 @@
       let teamCard = document.getElementsByClassName("team-card");
       let slide = document.getElementsByClassName("slide");
       let $technologyCard = $('#technology .card');
+      let domArr = ['technology tec-introduce', 'technology tec-info-text', 'ourTeam team-introduce', 'ourTeam stacked-img', 'globalLocation global-title', 'globalLocation earth-location'];
       // let tl = new TimelineMax();
       // let sections = document.querySelectorAll('section');
       // [].slice.call(sections, 1).forEach((item, index) => {
@@ -287,7 +288,7 @@
       // })
 
       
-      ['technology tec-introduce', 'technology tec-info-text', 'ourTeam team-introduce', 'ourTeam stacked-img', 'globalLocation global-title', 'globalLocation earth-location'].forEach(function (item) {
+      domArr.forEach(function (item) {
         let target = item.split(' '),
             $target = `.${target[1]}`,
             hasClass = $($target).hasClass('scroll-delay');
