@@ -226,7 +226,7 @@ import '../css/index.css';
     function splitText() {
       $('#textPrint').css('opacity', 1);
       let target = $('#textPrint');
-      let lan = getCookie("language") || "en";
+      let lan = defaultLang();
       let type = lan === 'en' ? 'words' : 'chars';
       // console.log(type, lan, '-==')
       let split = new SplitText(target, { type });
@@ -627,7 +627,7 @@ import '../css/index.css';
 
     function installSW() {
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/CYBERX/sw.js', { scope: '/CYBERX/'}).then(function(reg) {
+        navigator.serviceWorker.register('/sw.js', { scope: '/'}).then(function(reg) {
           if (reg.installing) {
             console.log('Service worker installing');
           } else if (reg.waiting) {
@@ -646,10 +646,42 @@ import '../css/index.css';
       throttle(earthSize, 500)
     }
 
+    function defaultLang() {
+      let locales = getCookie("language");
+      if (locales) {
+        return locales;
+      }
+      let queryParamLocale = getQueryParam("locale").toLowerCase();
+      if (['zh', 'en'].indexOf(queryParamLocale) >= 0) {
+        return queryParamLocale;
+      }
+
+      let browserLocal = navigator.language.slice(0, 2);
+      if (['zh', 'en'].indexOf(browserLocal) >= 0) {
+        return browserLocal;
+      }
+      return 'en';
+    }
+
+    function getQueryParam(name) {
+      let search = location.search,
+          value = '';
+      if (name && search && search[0] === '?') {
+        let params = search.substr(1).split('&'); // ["locale=en", "id=11"]
+        params.forEach(e => {
+          if (e && e.split('=')[0] === name) {
+            value = e.split['='][1];
+            // continue;
+          }
+        });
+      }
+      return value;
+    }
+
 
     return {
       init() {
-        let langType = getCookie("language") || "en", $language = $('.nav .language');
+        let langType = defaultLang(), $language = $('.nav .language');
         langType === 'en' ? $language.find('.text').text('English'): $language.find('.text').text('简体中文');
         installSW();
         lang(langType);

@@ -189,6 +189,9 @@ body a {
   background: url(../images/arrow.png) no-repeat;
   background-size: 100% 100%;
 }
+.main-contact {
+  margin-bottom: 35px;
+}
 .main-block .main-right-earth {
   height: 100%;
   flex: 1 1 60%;
@@ -489,7 +492,7 @@ body a {
   font-size: 20px;
 }
 .our-team .team-card {
-  width: 320px;
+  width: 237px;
   max-height: 540px;
   margin-bottom: 50px;
   padding: 0 18px;
