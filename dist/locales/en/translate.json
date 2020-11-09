@@ -53,7 +53,7 @@
 			"Cmiddle":"<p>10 Year+ </p ><p>Algo Trading/Quant Trading</p>",
 			"Cbottom":" <p> Merrill Lynch </p ><p>  Head of Quantitative Strategies/Global Markets ED</p ><p>AQR Capital </p ><p>  Quant Analyst</p ><p> Columbia University</p ><p> Financial Engineering</p ><p> Tsinghua University  </p ><p> A.I &Pattern Recognitions</p >",
 			"Dname":"Yue Wei <span class='cfa'>CFA</span>",
-			"Dmiddle":"10 Year+ Quant Trading</p >",
+			"Dmiddle":"<p>10 Year+ </p ><p>Quant Trading</p>",
 			"Dbottom":" <p> China based Quant fund  </p ><p>General Manager</p ><p>Large Mutual Fund   </p ><p>  Head of Quant Trading</p ><p>Citadel </p ><p>  Quant Analyst</p ><p> University of Wisconsin</p ><p>  PhD,Statistic</p ><p> Peking University </p ><p> Mathematic</p >",
 			"Ename":"Zack Fan",
 			"Emiddle":"<p>10 Year+</p> <p>Structure Product/Institutional Sales</p >",
@@ -63,7 +63,10 @@
 			"Fbottom":" <p>Kaggle competitions</p ><p>Gold Medals</p ><p>Google, Mountain View </p ><p> A.I.Scientist</p><p>University of Toronto </p ><p>  Master, A.I.</p ><p> University of Waterloo</p ><p> Computer Science</p >",
 			"Gname":"Harry Wong <span class='cfa'>CFA</span>",
 			"Gmiddle":"<p>10 Year+ </p ><p>Advisory/Internet/Crypto</p>",
-			"Gbottom":" <p>BitOcean Global,</p ><p> Co-founder&COO</p ><p>Deloitte</p ><p>Corporate Finance Advisor, Senior Associate</p > <p>University of British Columbia </p ><p>Accounting</p>"
+			"Gbottom":" <p>BitOcean Global,</p ><p> Co-founder&COO</p ><p>Deloitte</p ><p>Corporate Finance Advisor, Senior Associate</p > <p>University of British Columbia </p ><p>Accounting</p>",
+			"Hname":"CH Tang",
+			"Hmiddle":"<p>10 Year+</p ><p>Quant Trading</p>",
+			"Hbottom":" <p> GSA Capital Partners </p><p>Sr. Researcher</p><p>JT Capital Management </p ><p>Sr. Researcher</p><p>BlackRock</p ><p>Manager</p>"
 	},
 	"industry": {
 		"title": "Industry Thoughts",
